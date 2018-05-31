@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Метка яндекс в группе" />
+			<Item Name="Columns.Folder.Caption" Value="Группа Метка яндекс" />
+			<Item Name="Columns.NavYandexMarker.Caption" Value="Метка яндекс" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "c4d729e6-6182-4e07-b49c-40fd87c5381a",
+    "Name": "NavYandexMarkerInFolder",
+    "ModifiedOnUtc": "\/Date(1527586548000)\/",
+    "Parent": {
+      "UId": "4f63bafb-e9e7-4082-b92e-66b97c14017c",
+      "Name": "BaseItemInFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Метка яндекс в группе",
+    "DependsOn": []
+  }
+}

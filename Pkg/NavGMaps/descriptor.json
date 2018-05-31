@@ -1,0 +1,15 @@
+﻿{
+  "Descriptor": {
+    "UId": "bc2a07b9-fee7-4387-8260-9cb4510af27f",
+    "Name": "NavGMaps",
+    "ModifiedOnUtc": "\/Date(1518587869000)\/",
+    "Maintainer": "Navicon",
+    "DependsOn": [
+      {
+        "UId": "a7d9c356-450c-46d7-bc85-72dca4e280ba",
+        "PackageVersion": "7.8.0",
+        "Name": "NUI"
+      }
+    ]
+  }
+}

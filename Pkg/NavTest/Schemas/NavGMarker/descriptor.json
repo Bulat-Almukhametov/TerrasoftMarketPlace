@@ -1,0 +1,15 @@
+﻿{
+  "Descriptor": {
+    "UId": "57b06d08-1198-46dc-9cf5-6b6dfb47050e",
+    "Name": "NavGMarker",
+    "ModifiedOnUtc": "\/Date(1527577026000)\/",
+    "Parent": {
+      "UId": "a1af1f58-4d01-4f04-a8e0-b14aa4a295d6",
+      "Name": "NavGMarker"
+    },
+    "ExtendParent": true,
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Маркер карты",
+    "DependsOn": []
+  }
+}

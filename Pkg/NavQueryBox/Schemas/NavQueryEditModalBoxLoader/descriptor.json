@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "f9443148-3803-468a-83cc-82458e55dae5",
+    "Name": "NavQueryEditModalBoxLoader",
+    "ModifiedOnUtc": "\/Date(1521881828000)\/",
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Модуль для загрузки содержимого окошки"
+  }
+}

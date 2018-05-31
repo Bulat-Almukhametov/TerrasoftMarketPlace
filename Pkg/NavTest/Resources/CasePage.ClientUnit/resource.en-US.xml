@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.ChangeQueueItemDateButtonCaption.Value" Value="Postpone till" />
+			<Item Name="LocalizableStrings.EmailTitleCaption.Caption" Value="Case response" />
+			<Item Name="LocalizableStrings.EmailTitleCaption.Value" Value="Case response {0} {1}" />
+			<Item Name="LocalizableStrings.GeneralInfoTabCaption.Value" Value="Details" />
+			<Item Name="LocalizableStrings.HideSystemMessagesString.Caption" Value="Hide system messages" />
+			<Item Name="LocalizableStrings.HideSystemMessagesString.Value" Value="Hide system messages" />
+			<Item Name="LocalizableStrings.MessageHistoryGroupCaption.Caption" Value="History" />
+			<Item Name="LocalizableStrings.MessageHistoryGroupCaption.Value" Value="History" />
+			<Item Name="LocalizableStrings.MultipleQueueItemsFoundError.Value" Value="More than one queue element connected to the process. Process Id: {0}" />
+			<Item Name="LocalizableStrings.ParametersTabCaption.Caption" Value="Case profile" />
+			<Item Name="LocalizableStrings.ParametersTabCaption.Value" Value="Case profile" />
+			<Item Name="LocalizableStrings.PostponeQueueItemButtonCaption.Value" Value="Re-queue" />
+			<Item Name="LocalizableStrings.PostponeQueueItemError.Value" Value="Unable to re-queue item. Error message: {0}" />
+			<Item Name="LocalizableStrings.ProcessingTabCaption.Caption" Value="Processing" />
+			<Item Name="LocalizableStrings.ProcessingTabCaption.Value" Value="Processing" />
+			<Item Name="LocalizableStrings.QueueItemIsEmptyError.Value" Value="Page is not connected to the agent desktop queue element. Action cancelled." />
+			<Item Name="LocalizableStrings.QueueItemPostponeFailedMessage.Value" Value="Unable to re-queue item" />
+			<Item Name="LocalizableStrings.QueueItemPostponeSucceedMessage.Value" Value="Successfully re-queued" />
+			<Item Name="LocalizableStrings.ServiceItemTipMessage.Caption" Value="ServiceItemTipMessage" />
+			<Item Name="LocalizableStrings.ServiceItemTipMessage.Value" Value="&lt;p&gt; Services determine case categories as well as default response and resolution deadlines. Use the  &lt;a href=&quot;../0/Nui/ViewModule.aspx#SectionModuleV2/ServiceItemSection/&quot;&gt;&quot;Services&quot;&lt;/a&gt;  section to configure services &lt;/p&gt;" />
+			<Item Name="LocalizableStrings.SetCaseContactMessage.Value" Value="Specify {0} as contact in case?" />
+			<Item Name="LocalizableStrings.ShowSystemMessagesString.Caption" Value="Show system messages" />
+			<Item Name="LocalizableStrings.ShowSystemMessagesString.Value" Value="Show system messages" />
+		</Items>
+	</Group>
+</Resources>

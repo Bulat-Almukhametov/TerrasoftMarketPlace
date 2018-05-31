@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Card schema: &quot;Customizable report&quot;" />
+			<Item Name="LocalizableStrings.AddReferenceToCardLinkCaption.Value" Value="Add" />
+			<Item Name="LocalizableStrings.MainTabCaption.Value" Value="Main" />
+			<Item Name="LocalizableStrings.ReferenceToCardCaption.Value" Value="Path to page entity" />
+			<Item Name="LocalizableStrings.ReferenceToCardGroupCaption.Value" Value="Relationship with page entity" />
+			<Item Name="LocalizableStrings.Tab9a795b56TabLabelGroupbe95f834GroupCaption.Value" Value="Document" />
+		</Items>
+	</Group>
+</Resources>

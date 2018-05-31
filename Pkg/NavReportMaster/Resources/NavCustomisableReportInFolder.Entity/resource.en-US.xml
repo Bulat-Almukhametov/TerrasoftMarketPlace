@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Customizable report in folder" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_947a607366784688a1e5116c9e8df7ea.Caption" Value="Pool 2" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_947a607366784688a1e5116c9e8df7ea.Lanes.Lane3_4dadaee549d843b0995c4de4d06df592.Caption" Value="Lane 3" />
+		</Items>
+	</Group>
+</Resources>

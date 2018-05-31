@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="NavColumnMasterModule" />
+			<Item Name="LocalizableStrings.ColumnControlGroupCaption.Value" Value="Настройка колонок" />
+			<Item Name="LocalizableStrings.FiltersControlGroupCaption.Value" Value="Настройка фильтров" />
+		</Items>
+	</Group>
+</Resources>

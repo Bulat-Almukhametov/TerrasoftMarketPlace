@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "a65f22d8-5c82-4d2e-a4b6-ed3eba30170f",
+    "Name": "NavCustomisableReport1Section",
+    "ModifiedOnUtc": "\/Date(1520923704000)\/",
+    "Parent": {
+      "UId": "7912fb69-4fee-429f-8b23-93943c35d66d",
+      "Name": "BaseSectionV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема раздела: \"Настраиваемый отчет\""
+  }
+}

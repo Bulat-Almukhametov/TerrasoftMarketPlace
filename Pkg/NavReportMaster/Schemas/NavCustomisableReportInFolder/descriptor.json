@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "48ff486b-9b4b-4b6e-abb6-b3f4b4785e82",
+    "Name": "NavCustomisableReportInFolder",
+    "ModifiedOnUtc": "\/Date(1520924037000)\/",
+    "Parent": {
+      "UId": "4f63bafb-e9e7-4082-b92e-66b97c14017c",
+      "Name": "BaseItemInFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Настраиваемый отчет в группе",
+    "DependsOn": []
+  }
+}

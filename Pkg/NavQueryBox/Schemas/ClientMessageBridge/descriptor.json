@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "28c9e713-76de-44c6-9435-f4959f4e2642",
+    "Name": "ClientMessageBridge",
+    "ModifiedOnUtc": "\/Date(1507101098000)\/",
+    "Parent": {
+      "UId": "ca65ff87-7f01-442e-a7bf-787c3db44ab1",
+      "Name": "ClientMessageBridge"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "ClientMessageBridge"
+  }
+}

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Customizable report" />
+			<Item Name="Columns.NavCaption.Caption" Value="Document caption" />
+			<Item Name="Columns.NavCardPage.Caption" Value="Page" />
+			<Item Name="Columns.NavColumns.Caption" Value="Columns" />
+			<Item Name="Columns.NavDescription.Caption" Value="Top text" />
+			<Item Name="Columns.NavFilters.Caption" Value="Filters" />
+			<Item Name="Columns.NavFooter.Caption" Value="Footer text" />
+			<Item Name="Columns.NavGridSettings.Caption" Value="Grid settings" />
+			<Item Name="Columns.NavName.Caption" Value="Name" />
+			<Item Name="Columns.NavReferenceToCardCaption.Caption" Value="Reference path to page entity" />
+			<Item Name="Columns.NavReferenceToCardPath.Caption" Value="Reference path to page entity (column names)" />
+			<Item Name="Columns.NavSourceEntity.Caption" Value="Source lookup" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_d5c05395a7fb4cc7829d64859dfc6c60.Caption" Value="Pool 2" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_d5c05395a7fb4cc7829d64859dfc6c60.Lanes.Lane3_bf609e1d362f4a018ad5c9714c200b07.Caption" Value="Lane 3" />
+		</Items>
+	</Group>
+</Resources>

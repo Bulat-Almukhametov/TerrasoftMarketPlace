@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Настраиваемый отчет" />
+			<Item Name="Columns.NavCaption.Caption" Value="Заголовок отчета" />
+			<Item Name="Columns.NavCardPage.Caption" Value="Карточка для отображения отчета" />
+			<Item Name="Columns.NavColumns.Caption" Value="Колонки" />
+			<Item Name="Columns.NavDescription.Caption" Value="Начальный текст" />
+			<Item Name="Columns.NavFilters.Caption" Value="Фильтры" />
+			<Item Name="Columns.NavFooter.Caption" Value="Нижний колонтитул" />
+			<Item Name="Columns.NavGridSettings.Caption" Value="Профиль таблицы" />
+			<Item Name="Columns.NavName.Caption" Value="Название" />
+			<Item Name="Columns.NavReferenceToCardCaption.Caption" Value="Ссылка на объект карточки" />
+			<Item Name="Columns.NavReferenceToCardPath.Caption" Value="Ссылка на объект карточки (путь)" />
+			<Item Name="Columns.NavSourceEntity.Caption" Value="Схема источника" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Пул 1" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_d5c05395a7fb4cc7829d64859dfc6c60.Caption" Value="Пул 2" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_d5c05395a7fb4cc7829d64859dfc6c60.Lanes.Lane3_bf609e1d362f4a018ad5c9714c200b07.Caption" Value="Дорожка 3" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,9 @@
+= MetaData.Schema.UId "cc5729eb-9c83-4bc2-96f9-8084611e9692"
+= MetaData.Schema.A2 "NavGMarkerMiniPage"
+= MetaData.Schema.A5 "d212a665-2e1f-4982-85f5-06e374aee241"
+= MetaData.Schema.B6 "bc2a07b9-fee7-4387-8260-9cb4510af27f"
+= MetaData.Schema.B8 "7.11.0.3122"
+= MetaData.Schema.HD1 "8e06a577-08e4-424e-bd89-798a34e1b928"
+- MetaData.Schema.B7
+- MetaData.Schema.HD12
++ MetaData.Schema.B7 false

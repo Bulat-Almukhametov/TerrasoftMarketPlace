@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Схема карточки: &quot;Настраиваемый отчет&quot;" />
+			<Item Name="LocalizableStrings.AddReferenceToCardLinkCaption.Value" Value="Добавить" />
+			<Item Name="LocalizableStrings.MainTabCaption.Value" Value="Основная информация" />
+			<Item Name="LocalizableStrings.ReferenceToCardCaption.Value" Value="Ссылка на объект карточки" />
+			<Item Name="LocalizableStrings.ReferenceToCardGroupCaption.Value" Value="Связь с объектом карточки" />
+			<Item Name="LocalizableStrings.Tab9a795b56TabLabelGroupbe95f834GroupCaption.Value" Value="Внешний вид" />
+		</Items>
+	</Group>
+</Resources>

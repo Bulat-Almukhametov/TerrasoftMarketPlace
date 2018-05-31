@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+    "Name": "NavQueryEditModalBox",
+    "ModifiedOnUtc": "\/Date(1521671170000)\/",
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Окошко для перетаскивания блоков"
+  }
+}

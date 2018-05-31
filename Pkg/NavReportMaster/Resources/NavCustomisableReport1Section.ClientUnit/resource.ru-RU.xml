@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Схема раздела: &quot;Настраиваемый отчет&quot;" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Настраиваемый отчет" />
+			<Item Name="LocalizableStrings.NewCustomReportCaption.Value" Value="Создать ПФ" />
+		</Items>
+	</Group>
+</Resources>

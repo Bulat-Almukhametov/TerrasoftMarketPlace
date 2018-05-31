@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "216c7cd3-8ad6-45cb-b61b-f355ed9f3c67",
+    "Name": "NavSchemaService",
+    "ModifiedOnUtc": "\/Date(1521881749000)\/",
+    "ManagerName": "SourceCodeSchemaManager",
+    "Caption": "Сервис для получения информации о схемах"
+  }
+}

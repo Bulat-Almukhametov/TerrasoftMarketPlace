@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Файл и ссылка объекта Настраиваемый отчет" />
+			<Item Name="Columns.NavCustomisableReport.Caption" Value="Настраиваемый отчет" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Пул 1" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_651a392c633446d493657e0ae4af5330.Caption" Value="Пул 2" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_651a392c633446d493657e0ae4af5330.Lanes.Lane3_da5870e538d941b48fa1e03867bb08c5.Caption" Value="Дорожка 3" />
+		</Items>
+	</Group>
+</Resources>

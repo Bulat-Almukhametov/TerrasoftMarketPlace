@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Menu toolBox" />
+			<Item Name="LocalizableStrings.ColumnName.Value" Value="column_name" />
+			<Item Name="LocalizableStrings.DeleteMenu.Value" Value="Delete query" />
+			<Item Name="LocalizableStrings.FiltersMenu.Value" Value="Filters" />
+			<Item Name="LocalizableStrings.InsertMenu.Value" Value="Insert query" />
+			<Item Name="LocalizableStrings.LookupColumn.Value" Value="column_from_lookup" />
+			<Item Name="LocalizableStrings.SchemaName.Value" Value="schema_name" />
+			<Item Name="LocalizableStrings.SelectMenu.Value" Value="Select query" />
+			<Item Name="LocalizableStrings.Text.Value" Value="text" />
+			<Item Name="LocalizableStrings.UpdateMenu.Value" Value="Update query" />
+			<Item Name="LocalizableStrings.Value.Value" Value="value" />
+		</Items>
+	</Group>
+</Resources>

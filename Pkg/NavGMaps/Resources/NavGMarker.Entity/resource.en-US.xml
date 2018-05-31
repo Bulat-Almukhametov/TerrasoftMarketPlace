@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.NavAddress.Caption" Value="Address" />
+			<Item Name="Columns.NavCity.Caption" Value="City" />
+			<Item Name="Columns.NavCountry.Caption" Value="Country" />
+			<Item Name="Columns.NavLatitude.Caption" Value="Latitude" />
+			<Item Name="Columns.NavLongitude.Caption" Value="Longitude" />
+			<Item Name="Columns.NavMarkerColor.Caption" Value="Marker color" />
+			<Item Name="Columns.NavObject.Caption" Value="Referenced object" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "cc5729eb-9c83-4bc2-96f9-8084611e9692",
+    "Name": "NavGMarkerMiniPage",
+    "ModifiedOnUtc": "\/Date(1526462523000)\/",
+    "Parent": {
+      "UId": "8e06a577-08e4-424e-bd89-798a34e1b928",
+      "Name": "BaseMiniPage"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "NavGMarkerMiniPage"
+  }
+}

@@ -1,0 +1,254 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ClientUnitSchemaManager",
+      "UId": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+      "A2": "NavEsqBlocks",
+      "A5": "cd98177b-d8c2-40f3-a5df-f9c419cbab1a",
+      "B1": [],
+      "B2": [
+        {
+          "UId": "22643644-fe08-4474-9d58-b56203ad675c",
+          "A2": "SchemaName",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "cd526165-66f4-4cbe-9926-e8bc3df59eb0",
+          "A2": "Columns",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "ad5a7274-46fd-4821-9fd5-c0f22a70a566",
+          "A2": "Select",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "e1f54380-cbfc-4402-94f8-ad55e92ad287",
+          "A2": "Where",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "c3abf690-215d-42f8-9c79-232ceca65d7b",
+          "A2": "And",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "d39b2788-e83f-447f-88f0-58fa01c72d10",
+          "A2": "Or",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "2bbbc8de-3268-4b91-9571-602e9cdd7e97",
+          "A2": "SelectTooltip",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "8220fb82-19da-4f76-b4b8-b1de0bf6e3bf",
+          "A2": "AllColumns",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "cceeca6f-8c9a-4fd4-ba61-a83e32663a84",
+          "A2": "AllColumnsTooltip",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "869fce28-fb42-4847-aecd-e89c6f4250de",
+          "A2": "ColumnName",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "65d23fca-5d0e-4712-be07-46504a4e4e29",
+          "A2": "ColumnValue",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "95c23bf5-67bf-4944-b27e-8cbf9ebaa1cf",
+          "A2": "Equal",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "4fcc013f-1b38-455b-9bf9-2885bc25846a",
+          "A2": "Value",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "d51d6a30-e508-4da9-b1c0-d6c08549af4e",
+          "A2": "Empty",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "001bd305-7a6e-4b74-a7c7-e8545aa7b82b",
+          "A2": "EmptyComparationTooltip",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "c7762802-b4be-4638-85be-e2c038d0552e",
+          "A2": "NotEmpty",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "7cb0f76c-c9e5-4345-83fc-2ab61638b5be",
+          "A2": "Column",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "c7e47a63-9d7c-46bb-9875-77ebbf8dce13",
+          "A2": "SimpleColumnTooltip",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "b759e9dc-fe85-4e77-861a-8dac6721be1d",
+          "A2": "NotEqual",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "3aeaf865-cc01-413c-9dee-498f8de7fd4c",
+          "A2": "Contains",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "1bf96ba3-de51-4068-a722-7413554c1188",
+          "A2": "Update",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "f4c68192-887f-45a6-b74a-d1c82948473f",
+          "A2": "UpdateTooltip",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "4574da83-824c-4c0c-b66a-5383dd4406aa",
+          "A2": "Set",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "e215846e-b59f-4b8c-b543-29478e16934b",
+          "A2": "Type",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "e5f95a77-d6fb-4e5d-87ba-36dcbd67fdb6",
+          "A2": "Text",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "a4fdfca1-3773-4fec-b4fa-cbee9736ef36",
+          "A2": "Bool",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "33512977-0682-4081-882e-c5451902cda7",
+          "A2": "Guid",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "408cac3d-3bbe-4fe9-9753-7254b9f8df40",
+          "A2": "Int",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "f414d776-7f17-43ba-9276-f015153ab7ec",
+          "A2": "Float",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "3303ac78-b3cb-4fa6-b3d9-0295b1f1d86a",
+          "A2": "Time",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "33e1f0d1-5d91-4cc6-ad1b-dafce38200b5",
+          "A2": "Money",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "a18036a7-b935-4728-a618-cb637535552f",
+          "A2": "Insert",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "82ebae21-9da8-4685-b2c6-3024dc0f1753",
+          "A2": "InsertTooltip",
+          "A3": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A4": "106d1bfc-281a-4dfd-8a4b-9934accba3c4",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        }
+      ],
+      "B3": [],
+      "B6": "64996a79-8017-457c-87ba-ab59a9c27a7b",
+      "B8": "7.10.0.1742",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3",
+      "HD4": 1,
+      "HD6": "null",
+      "HD5": [],
+      "HD7": [],
+      "HD8": [],
+      "HD11": []
+    }
+  }
+}

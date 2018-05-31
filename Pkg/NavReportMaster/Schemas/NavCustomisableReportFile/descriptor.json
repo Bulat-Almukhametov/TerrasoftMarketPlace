@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "dd4367a0-b5d3-497e-b0e4-f227e02fcd3e",
+    "Name": "NavCustomisableReportFile",
+    "ModifiedOnUtc": "\/Date(1520871019000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Файл и ссылка объекта Настраиваемый отчет",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Query editor modalbox" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Query builder" />
+			<Item Name="LocalizableStrings.CopyButton.Value" Value="Copy to clipboard " />
+			<Item Name="LocalizableStrings.ExecuteButton.Value" Value="Execute" />
+			<Item Name="LocalizableStrings.SwitchCode.Value" Value="Source code" />
+			<Item Name="LocalizableStrings.SwitchTable.Value" Value="Data grid" />
+			<Item Name="LocalizableStrings.TableCaption.Value" Value="Results" />
+		</Items>
+	</Group>
+</Resources>

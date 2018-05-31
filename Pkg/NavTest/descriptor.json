@@ -1,0 +1,19 @@
+﻿{
+  "Descriptor": {
+    "UId": "565e7748-a8e5-4f8e-8ac3-b417c3e794bb",
+    "Name": "NavTest",
+    "ModifiedOnUtc": "\/Date(1527576934000)\/",
+    "Maintainer": "Navicon",
+    "DependsOn": [
+      {
+        "UId": "bc2a07b9-fee7-4387-8260-9cb4510af27f",
+        "Name": "NavGMaps"
+      },
+      {
+        "UId": "0ed574b3-dec0-41d8-bacb-c9ced196b4b5",
+        "PackageVersion": "7.8.0",
+        "Name": "CustomerCenterSoftkey"
+      }
+    ]
+  }
+}

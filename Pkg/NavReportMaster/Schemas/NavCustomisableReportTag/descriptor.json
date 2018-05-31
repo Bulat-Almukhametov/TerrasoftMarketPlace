@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "f3c00c2c-40ae-4e19-b8d4-a1763dd7d64a",
+    "Name": "NavCustomisableReportTag",
+    "ModifiedOnUtc": "\/Date(1520924186000)\/",
+    "Parent": {
+      "UId": "9e3f203c-e905-4de5-9468-335b193f2439",
+      "Name": "BaseTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег раздела Настраиваемый отчет",
+    "DependsOn": []
+  }
+}

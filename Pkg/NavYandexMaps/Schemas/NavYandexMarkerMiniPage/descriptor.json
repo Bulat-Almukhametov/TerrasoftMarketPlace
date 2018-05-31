@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "e199513b-dcd6-4009-9cd5-5ec65d771edc",
+    "Name": "NavYandexMarkerMiniPage",
+    "ModifiedOnUtc": "\/Date(1527594965000)\/",
+    "Parent": {
+      "UId": "8e06a577-08e4-424e-bd89-798a34e1b928",
+      "Name": "BaseMiniPage"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "NavYandexMarkerMiniPage"
+  }
+}

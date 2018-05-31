@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Тег в записи раздела Настраиваемый отчет" />
+			<Item Name="Columns.Entity.Caption" Value="Настраиваемый отчет" />
+			<Item Name="Columns.Tag.Caption" Value="Тег раздела Настраиваемый отчет" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Пул 1" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_6f73964727b74782b7c36296b8f960e6.Caption" Value="Пул 2" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_6f73964727b74782b7c36296b8f960e6.Lanes.Lane3_b4125ff023804d6183bce8f895047889.Caption" Value="Дорожка 3" />
+		</Items>
+	</Group>
+</Resources>

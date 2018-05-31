@@ -1,0 +1,30 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ClientUnitSchemaManager",
+      "UId": "ccbf2e85-032c-41de-a9ac-38cb89ca891b",
+      "A2": "NavJQGrid",
+      "A5": "cd98177b-d8c2-40f3-a5df-f9c419cbab1a",
+      "B1": [],
+      "B2": [
+        {
+          "UId": "38b86b28-2bb3-4bc7-9994-c329b21edf61",
+          "A2": "Language",
+          "A3": "ccbf2e85-032c-41de-a9ac-38cb89ca891b",
+          "A4": "ccbf2e85-032c-41de-a9ac-38cb89ca891b",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        }
+      ],
+      "B3": [],
+      "B6": "64996a79-8017-457c-87ba-ab59a9c27a7b",
+      "B8": "7.10.0.1742",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3",
+      "HD4": 1,
+      "HD6": "null",
+      "HD5": [],
+      "HD7": [],
+      "HD8": [],
+      "HD11": []
+    }
+  }
+}

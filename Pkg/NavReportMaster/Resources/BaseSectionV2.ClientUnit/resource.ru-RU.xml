@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.NewCustomReportCaption.Value" Value="Создать ПФ" />
+		</Items>
+	</Group>
+</Resources>

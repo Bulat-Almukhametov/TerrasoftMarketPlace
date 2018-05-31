@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "a6d0757d-80fb-49a6-9f2a-907e5bbd2d27",
+    "Name": "NavGridSettings",
+    "ModifiedOnUtc": "\/Date(1519107967000)\/",
+    "Parent": {
+      "UId": "f6a3f291-11de-4e66-af45-7085c4692f86",
+      "Name": "GridSettingsV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "NavGridSettings"
+  }
+}

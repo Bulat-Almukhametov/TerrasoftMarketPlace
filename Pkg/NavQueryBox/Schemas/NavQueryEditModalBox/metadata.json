@@ -1,0 +1,65 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ClientUnitSchemaManager",
+      "UId": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+      "A2": "NavQueryEditModalBox",
+      "A5": "cd98177b-d8c2-40f3-a5df-f9c419cbab1a",
+      "B1": [],
+      "B2": [
+        {
+          "UId": "0059df2a-17df-488d-981f-e459dc20865c",
+          "A2": "Caption",
+          "A3": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A4": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "2dd518cc-1f55-493b-a46f-33b8157223c7",
+          "A2": "SwitchCode",
+          "A3": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A4": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "d7b1219c-bae4-49c1-8f1f-075047f795a5",
+          "A2": "SwitchTable",
+          "A3": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A4": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "ad58e0f9-a74e-4764-b87e-d38a347d7429",
+          "A2": "ExecuteButton",
+          "A3": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A4": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "cdf448a0-eeef-4e65-80fe-6d65dca4e2a7",
+          "A2": "CopyButton",
+          "A3": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A4": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        },
+        {
+          "UId": "d2faa6ea-eb0b-4e5d-88b1-e7d4876c9a99",
+          "A2": "TableCaption",
+          "A3": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A4": "25380b6f-1e53-41a3-a454-fe65448e06a2",
+          "A5": "a8e41140-795e-4b4f-9b73-3cf53082056c"
+        }
+      ],
+      "B3": [],
+      "B6": "64996a79-8017-457c-87ba-ab59a9c27a7b",
+      "B8": "7.10.0.1742",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3",
+      "HD4": 2,
+      "HD6": "define('{0}Structure', ['{0}Resources'], function(resources) {{return {{schemaUId:'{2}',schemaName:'{3}',parentSchemaUId:'{4}',extendParent:{5},type:Terrasoft.SchemaType.EDIT_VIEW_MODEL_SCHEMA,entitySchema:'',name:'',extend:'Terrasoft.model.BaseViewModel',schema:{{leftPanel:[],rightPanel:[],actions:[],analytics:[]}},methods:{{}},controlsConfig:{{}},customBindings:{{}},bindings:{{}},schemaDifferences:function(){{\n{1}\n}}}};}});",
+      "HD5": [],
+      "HD7": [],
+      "HD8": [],
+      "HD11": []
+    }
+  }
+}

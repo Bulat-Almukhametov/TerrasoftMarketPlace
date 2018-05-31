@@ -1,0 +1,8 @@
+= MetaData.Schema.UId "bcab80bd-db8f-4ead-9074-4617c29687ee"
+= MetaData.Schema.A2 "NavYandexMarker1Page"
+= MetaData.Schema.B6 "a1077cca-9412-4c89-9d9f-47a2dcdc520b"
++ MetaData.Schema.B8 "7.11.0.3122"
+= MetaData.Schema.HD1 "d62293c0-7f14-44b1-b547-735fb40499cd"
+- MetaData.Schema.B7
+- MetaData.Schema.HD12
++ MetaData.Schema.B7 false

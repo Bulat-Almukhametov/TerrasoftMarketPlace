@@ -1,0 +1,15 @@
+﻿{
+  "Descriptor": {
+    "UId": "a1077cca-9412-4c89-9d9f-47a2dcdc520b",
+    "Name": "NavYandexMaps",
+    "ModifiedOnUtc": "\/Date(1527585986000)\/",
+    "Maintainer": "Navicon",
+    "DependsOn": [
+      {
+        "UId": "a7d9c356-450c-46d7-bc85-72dca4e280ba",
+        "PackageVersion": "7.8.0",
+        "Name": "NUI"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.AllColumns.Value" Value="all columns" />
+			<Item Name="LocalizableStrings.AllColumnsTooltip.Value" Value="Include all columns." />
+			<Item Name="LocalizableStrings.And.Value" Value="and" />
+			<Item Name="LocalizableStrings.Bool.Value" Value="boolean" />
+			<Item Name="LocalizableStrings.Column.Value" Value="column" />
+			<Item Name="LocalizableStrings.ColumnName.Value" Value="column_name" />
+			<Item Name="LocalizableStrings.Columns.Value" Value="columns" />
+			<Item Name="LocalizableStrings.ColumnValue.Value" Value="column value" />
+			<Item Name="LocalizableStrings.Contains.Value" Value="contains" />
+			<Item Name="LocalizableStrings.Empty.Value" Value="is empty" />
+			<Item Name="LocalizableStrings.EmptyComparationTooltip.Value" Value="Column is null or empty." />
+			<Item Name="LocalizableStrings.Equal.Value" Value="Equal" />
+			<Item Name="LocalizableStrings.Float.Value" Value="float" />
+			<Item Name="LocalizableStrings.Guid.Value" Value="unique identificator" />
+			<Item Name="LocalizableStrings.Insert.Value" Value="Insert" />
+			<Item Name="LocalizableStrings.InsertTooltip.Value" Value="Create new record." />
+			<Item Name="LocalizableStrings.Int.Value" Value="integer" />
+			<Item Name="LocalizableStrings.Money.Value" Value="money" />
+			<Item Name="LocalizableStrings.NotEmpty.Value" Value="is not empty" />
+			<Item Name="LocalizableStrings.NotEqual.Value" Value="is not equal" />
+			<Item Name="LocalizableStrings.Or.Value" Value="or" />
+			<Item Name="LocalizableStrings.SchemaName.Value" Value="schema_name" />
+			<Item Name="LocalizableStrings.Select.Value" Value="Select" />
+			<Item Name="LocalizableStrings.SelectTooltip.Value" Value="Write object name" />
+			<Item Name="LocalizableStrings.Set.Value" Value="set" />
+			<Item Name="LocalizableStrings.SimpleColumnTooltip.Value" Value="Write column name." />
+			<Item Name="LocalizableStrings.Text.Value" Value="text" />
+			<Item Name="LocalizableStrings.Time.Value" Value="date time" />
+			<Item Name="LocalizableStrings.Type.Value" Value="type" />
+			<Item Name="LocalizableStrings.Update.Value" Value="Update" />
+			<Item Name="LocalizableStrings.UpdateTooltip.Value" Value="Update query." />
+			<Item Name="LocalizableStrings.Where.Value" Value="where" />
+		</Items>
+	</Group>
+</Resources>

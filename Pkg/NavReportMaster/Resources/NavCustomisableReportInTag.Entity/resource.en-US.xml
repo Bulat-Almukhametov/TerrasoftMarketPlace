@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Customizable report section record tag" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet1253567487.Caption" Value="Pool 14675678567" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_6f73964727b74782b7c36296b8f960e6.Caption" Value="Pool 2" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet2_6f73964727b74782b7c36296b8f960e6.Lanes.Lane3_b4125ff023804d6183bce8f895047889.Caption" Value="Lane 3" />
+		</Items>
+	</Group>
+</Resources>

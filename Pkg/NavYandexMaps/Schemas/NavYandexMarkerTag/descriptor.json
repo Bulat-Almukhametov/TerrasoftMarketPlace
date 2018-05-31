@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "b80ef1da-39a1-4e46-b4e1-e2a4fa4834a9",
+    "Name": "NavYandexMarkerTag",
+    "ModifiedOnUtc": "\/Date(1527586549000)\/",
+    "Parent": {
+      "UId": "9e3f203c-e905-4de5-9468-335b193f2439",
+      "Name": "BaseTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег раздела Метка яндекс",
+    "DependsOn": []
+  }
+}
