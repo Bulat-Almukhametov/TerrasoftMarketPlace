@@ -297,7 +297,16 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
 
             onReferenceToCardClick: function (control, ev, el) {
                 var entity = this.get("NavSourceEntity");
-                Terrasoft.require(["AccountPageV2"], function (schema) {
+                var card = this.get("NavCardPage");
+                if (!card)
+                    return;
+
+                var schemaBuilder = this.Ext.create("Terrasoft.SchemaBuilder");
+                var config = {
+                    schemaName: card.Name
+                };
+                schemaBuilder.requireAllSchemaHierarchy(config, function(baseHierarchy) {
+                    var schema = baseHierarchy.find(item => !!item.entitySchemaName);
 
                     var structureExplorerConfig = {
                         schemaName: entity.Name,
