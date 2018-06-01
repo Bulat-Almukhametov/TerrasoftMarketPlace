@@ -48,6 +48,11 @@ define("NavGMarkerMiniPage", ["MiniPageResourceUtilities", "css!NavGMarkerCss"],
                     },
                 },
 
+                "ObjectContainerVisible": {
+                    "dataValueType": Terrasoft.DataValueType.BOOLEAN,
+                    "type": Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+                    "value": false
+                }
             },
         },
         methods: {
@@ -58,6 +63,11 @@ define("NavGMarkerMiniPage", ["MiniPageResourceUtilities", "css!NavGMarkerCss"],
                 var refId = this.get("NavObjectValue");
                 if (refId)
                     this.loadLookupDisplayValue("ReferenceObject", refId, Terrasoft.emptyFn);
+            },
+
+            showLinkObject: function (event) {
+                event.stopPropagation();
+                this.set("ObjectContainerVisible", !this.get("ObjectContainerVisible"));
             },
 
             onNavObject: function () {
@@ -196,6 +206,10 @@ define("NavGMarkerMiniPage", ["MiniPageResourceUtilities", "css!NavGMarkerCss"],
         },
         diff: /**SCHEMA_DIFF*/[
             {
+                "operation": "remove",
+                "name": "OpenCurrentEntityPage"
+            },
+            {
                 "operation": "insert",
                 "name": "Name",
                 "parentName": "MiniPage",
@@ -211,6 +225,38 @@ define("NavGMarkerMiniPage", ["MiniPageResourceUtilities", "css!NavGMarkerCss"],
             },
             {
                 "operation": "insert",
+                "parentName": "MiniPage",
+                "propertyName": "items",
+                "name": "ColorButtonCaption",
+                "values": {
+                    "caption": "Цвет",
+                    "itemType": this.Terrasoft.ViewItemType.LABEL,
+                    "isMiniPageModelItem": true,
+                    "layout": {
+                        "column": 0,
+                        "row": 2,
+                        "colSpan": 4
+                    }
+                }
+            },
+            {
+                "operation": "insert",
+                "parentName": "MiniPage",
+                "propertyName": "items",
+                "name": "ColorButton",
+                "values": {
+                    "caption": "Цвет",
+                    "itemType": this.Terrasoft.ViewItemType.COLOR_BUTTON,
+                    "value": { "bindTo": "NavMarkerColor" },
+                    "layout": {
+                        "column": 4,
+                        "row": 2,
+                        "colSpan": 4
+                    }
+                }
+            },
+            {
+                "operation": "insert",
                 "name": "NavCountry",
                 "parentName": "MiniPage",
                 "propertyName": "items",
@@ -218,7 +264,7 @@ define("NavGMarkerMiniPage", ["MiniPageResourceUtilities", "css!NavGMarkerCss"],
                     "isMiniPageModelItem": true,
                     "layout": {
                         "column": 0,
-                        "row": 2,
+                        "row": 3,
                         "colSpan": 24
                     }
                 }
@@ -233,7 +279,7 @@ define("NavGMarkerMiniPage", ["MiniPageResourceUtilities", "css!NavGMarkerCss"],
                     "isMiniPageModelItem": true,
                     "layout": {
                         "column": 0,
-                        "row": 3,
+                        "row": 4,
                         "colSpan": 24
                     }
                 }
@@ -247,7 +293,7 @@ define("NavGMarkerMiniPage", ["MiniPageResourceUtilities", "css!NavGMarkerCss"],
                     "isMiniPageModelItem": true,
                     "layout": {
                         "column": 0,
-                        "row": 4,
+                        "row": 5,
                         "colSpan": 24
                     },
                     "controlConfig": {
@@ -262,44 +308,59 @@ define("NavGMarkerMiniPage", ["MiniPageResourceUtilities", "css!NavGMarkerCss"],
                 "propertyName": "items",
                 "name": "LinkCaption",
                 "values": {
-                    "itemType": Terrasoft.ViewItemType.LABEL,
+                    "itemType": Terrasoft.ViewItemType.HYPERLINK,
                     "caption": "Ссылка на объект",
-                    "classes": {"labelClass": ["nav-link-labelClass"]},
+                    // "classes": {"labelClass": ["nav-link-labelClass"]},
                     "layout": {
                         "column": 3,
-                        "row": 5,
+                        "row": 6,
                         "colSpan": 21
                     },
-                }
-            },
-            {
-                "operation": "insert",
-                "name": "NavObject",
-                "parentName": "MiniPage",
-                "propertyName": "items",
-                "values": {
-                    "isMiniPageModelItem": true,
-                    "layout": {
-                        "column": 0,
-                        "row": 6,
-                        "colSpan": 24
-                    }
-                }
-            },
-            {
-                "operation": "insert",
-                "name": "ReferenceObject",
-                "parentName": "MiniPage",
-                "propertyName": "items",
-                "values": {
-                    "visible": {"bindTo": "ReferenceObjectVisible"},
+                    "tpl": [
+                        '<a id={id} name="{name}"" ',
+                        'target="{target}" class="nav-link-labelClass" style="display:inline;" title="{hint}" type="{type}">{caption}',
+                        '</a>'
+                    ],
+                    "click": { "bindTo": "showLinkObject"}
 
-                    "isMiniPageModelItem": true,
+
+                }
+            },
+            {
+                "operation": "insert",
+                "name": "ObjectContainer",
+                "parentName": "MiniPage",
+                "propertyName": "items",
+                "values": {
+                    "itemType": Terrasoft.ViewItemType.CONTAINER,
+                    "visible": {"bindTo": "ObjectContainerVisible"},
+                    "items": [],
                     "layout": {
                         "column": 0,
                         "row": 7,
                         "colSpan": 24
                     }
+                }
+            },
+            {
+                "operation": "insert",
+                "name": "NavObject",
+                "parentName": "ObjectContainer",
+                "propertyName": "items",
+                "values": {
+                    "isMiniPageModelItem": true,
+
+                }
+            },
+            {
+                "operation": "insert",
+                "name": "ReferenceObject",
+                "parentName": "ObjectContainer",
+                "propertyName": "items",
+                "values": {
+                    "visible": {"bindTo": "ReferenceObjectVisible"},
+                    "isMiniPageModelItem": true,
+
                 }
             },
 

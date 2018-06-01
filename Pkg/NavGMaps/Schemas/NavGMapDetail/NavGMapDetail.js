@@ -542,9 +542,14 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                         map.panToBounds(bounds);
 
                         if (markers.getCount() == 1) {
+                            // если карта загрузилась быстро
                             setTimeout(function () {
                                 map.setZoom(17);
                             }, 100);
+                            // если карта загрузилась долго
+                            setTimeout(function () {
+                                map.setZoom(17);
+                            }, 400);
 
                         }
                     });
