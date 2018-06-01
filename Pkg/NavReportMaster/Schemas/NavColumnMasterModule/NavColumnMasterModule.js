@@ -41,15 +41,7 @@ define("NavColumnMasterModule", ["css!NavColumnMasterModule"], function () {
                     "items": []
                 }
             },
-            {
-                "operation": "insert",
-                "parentName": "FiltersControlGroup",
-                "propertyName": "items",
-                "name": "TextEdit",
-                "values": {
-                    "bindTo": "TextColumn"
-                }
-            },
+
         ] /**SCHEMA_DIFF*/,
         methods: {
             init: function () {
@@ -175,13 +167,7 @@ define("NavColumnMasterModule", ["css!NavColumnMasterModule"], function () {
             }
         },
         attributes: {
-            TextColumn: {
-                dataValueType: this.Terrasoft.DataValueType.TEXT,
-                type: this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
-                caption: "Text",
-                //isRequired: true,
-                value: "some text"
-            }
+
         }
 
     }
