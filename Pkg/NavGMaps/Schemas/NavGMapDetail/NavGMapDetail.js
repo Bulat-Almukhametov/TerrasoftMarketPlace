@@ -126,6 +126,11 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                             searchBox.addListener('places_changed', function() {
                                 context.onSearch.call(context);
                             });
+                            var map = this.model.get("Map");
+                            searchBox.setBounds(map.getBounds());
+                            map.addListener('bounds_changed', function() {
+                                searchBox.setBounds(map.getBounds());
+                            });
 
                         }
                     },
@@ -226,9 +231,9 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                 });
             },
             hideSearchMarker: function () {
-                var oldMarker = this.get("SearchMarker");
-                if (oldMarker) {
-                    oldMarker.setMap(null);
+                var markers = this.get("SearchMarker");
+                if (markers) {
+                    markers.forEach(oldMarker => oldMarker.setMap(null));
                 }
             },
 
@@ -238,31 +243,34 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                 var searchBox = this.get("SearchBox");
                 var map = this.get("Map");
                 var places = searchBox.getPlaces();
-                if (places.length == 0) {
+                if (places && places.length == 0) {
                     return;
                 }
-                var place = places[0];
-                if (!place.geometry) {
-                    console.log("Returned place contains no geometry");
-                    return;
-                }
-                var icon = {
-                    url: place.icon,
-                    size: new google.maps.Size(71, 71),
-                    origin: new google.maps.Point(0, 0),
-                    anchor: new google.maps.Point(17, 34),
-                    scaledSize: new google.maps.Size(25, 25)
-                };
+                var markers = [];
+                places.forEach(function(place) {
+                    if (!place.geometry) {
+                        console.log("Returned place contains no geometry");
+                        return;
+                    }
+                    var icon = {
+                        url: place.icon,
+                        size: new google.maps.Size(71, 71),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34),
+                        scaledSize: new google.maps.Size(25, 25)
+                    };
 
-                var searchMarker = new google.maps.Marker({
-                    map: map,
-                    icon: icon,
-                    title: place.name,
-                    position: place.geometry.location
+                    var searchMarker = new google.maps.Marker({
+                        map: map,
+                        icon: icon,
+                        title: place.name,
+                        position: place.geometry.location
+                    });
+                    markers.push(searchMarker);
                 });
-                this.set("SearchMarker", searchMarker);
+                this.set("SearchMarker", markers);
                 // Create a marker for each place.
-                map.setCenter(place.geometry.location);
+                map.setCenter(places[0].geometry.location);
 
             },
 
