@@ -113,7 +113,20 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                     "bindTo": "SearchAddressColumn",
                     "controlConfig": {
                         "onEnterKeyPressed": function () {
-                            this.model.onSearch.call(this.model, this.el.getValue());
+                            this.model.onSearch.call(this.model);
+                        },
+                        onAfterRender: function () {
+                            var parentMethod = this.superclass.onAfterRender;
+                            parentMethod.call(this, arguments);
+
+                            var input = document.getElementById(this.id + '-el');
+                            var searchBox = new google.maps.places.SearchBox(input);
+                            this.model.set("SearchBox", searchBox);
+                            var context = this.model;
+                            searchBox.addListener('places_changed', function() {
+                                context.onSearch.call(context);
+                            });
+
                         }
                     },
                     "visible": {"bindTo": "SearchAddressVisible"},
@@ -212,13 +225,45 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                     });
                 });
             },
+            hideSearchMarker: function () {
+                var oldMarker = this.get("SearchMarker");
+                if (oldMarker) {
+                    oldMarker.setMap(null);
+                }
+            },
 
-            onSearch: function (value) {
-                var address = value || this.get("SearchAddressColumn");
+            onSearch: function () {
+                this.hideSearchMarker();
+
+                var searchBox = this.get("SearchBox");
                 var map = this.get("Map");
-                this.gMapsGetLocation(address).then(function (location) {
-                    map.setCenter(location);
+                var places = searchBox.getPlaces();
+                if (places.length == 0) {
+                    return;
+                }
+                var place = places[0];
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                var icon = {
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(25, 25)
+                };
+
+                var searchMarker = new google.maps.Marker({
+                    map: map,
+                    icon: icon,
+                    title: place.name,
+                    position: place.geometry.location
                 });
+                this.set("SearchMarker", searchMarker);
+                // Create a marker for each place.
+                map.setCenter(place.geometry.location);
+
             },
 
             onRender: function () {
@@ -241,8 +286,8 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                 this.set("ShowAllMarkersCaption", showAll ? "Фильтровать маркеры для текущей страницы" : "Показать все маркеры");
 
                 var setFiltersMenuItem = this.getButtonMenuItem({
-                    Caption: { "bindTo": "ShowAllMarkersCaption" },
-                    Click: { "bindTo": "showAllMarkers" }
+                    Caption: {"bindTo": "ShowAllMarkersCaption"},
+                    Click: {"bindTo": "showAllMarkers"}
                 });
                 toolsButtonMenu.addItem(setFiltersMenuItem);
             },
@@ -269,6 +314,7 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
 
             closeSearchMenu: function () {
                 this.set("SearchAddressVisible", false);
+                this.hideSearchMarker();
             },
 
             addRecord: function () {
@@ -312,7 +358,7 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                     var keyVal = sysSettings.NavGMapsKey;
                     if (keyVal) {
                         $.ajax({
-                            url: "https://maps.googleapis.com/maps/api/js?key=" + keyVal + "&callback=initMap",
+                            url: "https://maps.googleapis.com/maps/api/js?key=" + keyVal + "&callback=initMap&libraries=places",
                             dataType: "script"
                         });
                     }
@@ -555,9 +601,7 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                     });
 
 
-
                 }, this);
-
 
 
             },
@@ -673,8 +717,7 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
 
 
                 return deserializedDetailFilters;
-            }
-            ,
+            },
 
             initQueryColumns: function (esq) {
                 this.addGridDataColumns(esq);
@@ -683,8 +726,13 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                 this.addProcessEntryPointColumn(esq);
                 this.addAllColumns(esq);
 
+            },
+            onSearchAddressVisibleChange: function () {
+                var visible = this.get("SearchAddressVisible");
+                if (visible) {
+
+                }
             }
-            ,
         },
         messages: {
             "ReloadDashboardItems": {
@@ -701,7 +749,13 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
             "SearchAddressVisible": {
                 dataValueType: Terrasoft.DataValueType.BOOLEAN,
                 type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
-                value: false
+                value: false,
+                dependencies: [
+                    {
+                        columns: ["SearchAddressVisible"],
+                        methodName: "onSearchAddressVisibleChange"
+                    }
+                ]
             },
             "ShowAllMarkersCaption": {
                 dataValueType: Terrasoft.DataValueType.TEXT,
