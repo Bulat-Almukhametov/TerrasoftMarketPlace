@@ -243,7 +243,7 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                 var searchBox = this.get("SearchBox");
                 var map = this.get("Map");
                 var places = searchBox.getPlaces();
-                if (places && places.length == 0) {
+                if (!places || places.length == 0) {
                     return;
                 }
                 var markers = [];
@@ -363,12 +363,17 @@ define("NavGMapDetail", ["jQuery", "css!NavGMarkerCss"], function () {
                     scope.reloadGridData();
                 };
                 Terrasoft.SysSettings.querySysSettings(["NavGMapsKey"], function (sysSettings) {
-                    var keyVal = sysSettings.NavGMapsKey;
-                    if (keyVal) {
-                        $.ajax({
-                            url: "https://maps.googleapis.com/maps/api/js?key=" + keyVal + "&callback=initMap&libraries=places",
-                            dataType: "script"
-                        });
+                    if (window.google && window.google.maps) {
+                        window.initMap();
+                    }
+                    else {
+                        var keyVal = sysSettings.NavGMapsKey;
+                        if (keyVal) {
+                            $.ajax({
+                                url: "https://maps.googleapis.com/maps/api/js?key=" + keyVal + "&callback=initMap&libraries=places",
+                                dataType: "script"
+                            });
+                        }
                     }
                 }, scope);
 
