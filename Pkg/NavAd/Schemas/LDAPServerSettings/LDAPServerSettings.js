@@ -48,46 +48,6 @@ define("LDAPServerSettings", ["terrasoft", "LDAPServerSettingsResources", "Servi
                 }
 				],
 			methods: {
-                /**
-                 * LDAP
-                 * @protected
-                 * @overridden
-                 */
-                onGetSysSettingValues: function(response) {
-                	window[this.name] = this;
-                    var sysSettingsCollection = response.GetSysSettingValuesResult;
-                    if (!sysSettingsCollection) {
-                        return;
-                    }
-                    var ldapLastSynchDateName = this.get("LDAPLastSynchDateName");
-                    this.Terrasoft.SysSettings.querySysSettingsItem(ldapLastSynchDateName, function(date) {
-                        var lDAPEnumFieldName = this.get("LDAPEnumFieldName");
-                        sysSettingsCollection.forEach(function(item) {
-                            var key = item.Key;
-                            var value = item.Value;
-                            if (key !== lDAPEnumFieldName) {
-                                if (key === "LDAPServerPassword" || key === ldapLastSynchDateName) {
-                                    value = null;
-                                }
-                                this.set(key, value);
-                            } else {
-                                this.getColumnByName(key).referenceSchemaName = key;
-                                var esq = this.getLookupQuery(null, key, false);
-                                esq.enablePrimaryColumnFilter(value);
-                                esq.getEntityCollection(function(result) {
-                                    if (result.success && result.collection.getCount()) {
-                                        var entity = result.collection.getByIndex(0);
-                                        var enumConfig = {
-                                            value: entity.values.value,
-                                            displayValue: entity.values.displayValue
-                                        };
-                                        this.set(key, enumConfig);
-                                    }
-                                }, this);
-                            }
-                        }, this);
-                    }, this);
-                },
 
 
                 /**
