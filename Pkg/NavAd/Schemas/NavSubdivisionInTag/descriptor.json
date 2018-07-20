@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "6e8395bd-7a22-453f-811f-452b74ff64a1",
+    "Name": "NavSubdivisionInTag",
+    "ModifiedOnUtc": "\/Date(1511253187000)\/",
+    "Parent": {
+      "UId": "5894a2b0-51d5-419a-82bb-238674634270",
+      "Name": "BaseEntityInTag"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Тег в записи раздела Подразделение",
+    "DependsOn": []
+  }
+}

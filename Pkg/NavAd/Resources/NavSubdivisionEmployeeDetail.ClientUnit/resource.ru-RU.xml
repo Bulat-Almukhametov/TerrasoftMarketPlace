@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Схема детали: &quot;Сотрудники подразделения&quot;" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Сотрудники подразделения" />
+			<Item Name="LocalizableStrings.NavSubdivisionCaption.Value" Value="Сотрудники подразделения" />
+		</Items>
+	</Group>
+</Resources>

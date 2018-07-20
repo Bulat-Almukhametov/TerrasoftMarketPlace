@@ -1,0 +1,63 @@
+﻿{
+  "Descriptor": {
+    "UId": "bba96ea1-2b5f-41d8-b1fe-df54cf0846f0",
+    "Name": "CommunicationType",
+    "ModifiedOnUtc": "\/Date(1514195012000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "d846cb4f-f18d-469e-83ff-e961f3fba873",
+      "Name": "CommunicationType"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "9583d17a-064d-402d-bdb1-7d377628d64b",
+        "IsForceUpdate": true,
+        "IsKey": false,
+        "ColumnName": "UseforAccounts",
+        "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
+      },
+      {
+        "ColumnUId": "7a8944fa-b3f0-46dc-8f51-f6b0706106f8",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Image",
+        "DataTypeValueUId": "fa6e6e49-b996-475e-a77e-73904e4c5a88"
+      },
+      {
+        "ColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Description",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "0da3b0de-9d19-47e8-89e4-e113dde44a8c",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "HyperlinkTemplate",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "07748e81-b1d1-4cdb-9e41-d5e0be2e13d9",
+        "IsForceUpdate": true,
+        "IsKey": false,
+        "ColumnName": "UseforContacts",
+        "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
+      },
+      {
+        "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+        "IsForceUpdate": true,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      }
+    ]
+  }
+}

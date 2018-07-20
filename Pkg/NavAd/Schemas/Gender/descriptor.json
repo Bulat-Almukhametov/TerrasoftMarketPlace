@@ -1,0 +1,15 @@
+﻿{
+  "Descriptor": {
+    "UId": "5c9a2da5-3dd8-4f46-b994-45e5d468dc48",
+    "Name": "Gender",
+    "ModifiedOnUtc": "\/Date(1529509671000)\/",
+    "Parent": {
+      "UId": "0bc5d826-8e8f-48cd-b087-30b33d133120",
+      "Name": "Gender"
+    },
+    "ExtendParent": true,
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Пол",
+    "DependsOn": []
+  }
+}

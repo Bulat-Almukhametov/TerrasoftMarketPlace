@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "252c8bc9-b15c-43d4-a5fb-a5711081b8cb",
+    "Name": "NavAdContactsProcessingHelper",
+    "ModifiedOnUtc": "\/Date(1529390299000)\/",
+    "ManagerName": "SourceCodeSchemaManager",
+    "Caption": "Исполнитель обработчиков контакта при интеграции с AD"
+  }
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "bbfdbc8a-ee67-4205-85c7-91d93d8d4cba",
+    "Name": "NavContactHandlers",
+    "ModifiedOnUtc": "\/Date(1511830949000)\/",
+    "Parent": {
+      "UId": "6a0f1fe9-8469-4803-902f-b90b7799b66a",
+      "Name": "NavAdAttributesHandlers"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Обработка атрибутов для контактов AD",
+    "DependsOn": []
+  }
+}

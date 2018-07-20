@@ -1,0 +1,40 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "dfa76dad-9bb7-4c53-9a63-e4f6482776b9",
+          "Value": "e037f25a-d7bc-df11-b00f-001d60e938c6",
+          "DisplayValue": "Телефон"
+        },
+        {
+          "SchemaColumnUId": "34b83991-65a0-4978-ac5e-73cd4e167a4a",
+          "Value": "33a8b7c5-30c6-4719-bc9d-ee4f99e3665c",
+          "DisplayValue": "Доп. мобильный телефон"
+        },
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "a6003eca-e3e6-48f9-a8e3-2648439f8739"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "dfa76dad-9bb7-4c53-9a63-e4f6482776b9",
+          "Value": "e037f25a-d7bc-df11-b00f-001d60e938c6",
+          "DisplayValue": "Телефон"
+        },
+        {
+          "SchemaColumnUId": "34b83991-65a0-4978-ac5e-73cd4e167a4a",
+          "Value": "c4b41189-885b-437a-aa17-318f49a47aa7",
+          "DisplayValue": "Доп. домашний телефон"
+        },
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "9e07aefb-f500-44d6-88be-d4016f9100b1"
+        }
+      ]
+    }
+  ]
+}

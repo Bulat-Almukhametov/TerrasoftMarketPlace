@@ -1,0 +1,1 @@
+update SysSettings set Code='LDAPContactAttribute' where id like 'D3C76103-FB44-415B-81CC-433FF54930B5'

@@ -1,0 +1,32 @@
+= MetaData.Schema.UId "bbfdbc8a-ee67-4205-85c7-91d93d8d4cba"
+= MetaData.Schema.A2 "NavContactHandlers"
+= MetaData.Schema.EG1.UId "02e36f03-bd65-4182-a485-8f0b1bce2a0b"
+= MetaData.Schema.EG1.A2 "NavContactHandlersEventsProcess"
+= MetaData.Schema.EG1.BK8 "b5af4f56-f868-42a5-8e91-75bac41fc9c8"
+= MetaData.Schema.D8 "6a0f1fe9-8469-4803-902f-b90b7799b66a"
+- MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16
+- MetaData.Schema.D2.["e80190a5-03b2-4095-90f7-a193a960adee"].E16
+- MetaData.Schema.D2.["ebf6bb93-8aa6-4a01-900d-c6ea67affe21"].E16
+- MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16
+- MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16
+- MetaData.Schema.D2.["736c30a7-c0ec-4fa9-b034-2552b319b633"].E16
+- MetaData.Schema.D2.["9e53fd7c-dde4-4502-a64c-b9e34148108b"].E16
+- MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16
+= MetaData.Schema.D20.A2 "NavContactHandlersEvents"
+- MetaData.Schema.D1
+- MetaData.Schema.B7
++ MetaData.Schema.B7 false
++ MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16 false
++ MetaData.Schema.D2.["e80190a5-03b2-4095-90f7-a193a960adee"].E16 false
++ MetaData.Schema.D2.["ebf6bb93-8aa6-4a01-900d-c6ea67affe21"].E16 false
++ MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16 false
++ MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16 false
++ MetaData.Schema.D2.["736c30a7-c0ec-4fa9-b034-2552b319b633"].E16 false
++ MetaData.Schema.D2.["9e53fd7c-dde4-4502-a64c-b9e34148108b"].E16 false
++ MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16 false
++ MetaData.Schema.D2.["7579c882-cb43-4d8a-8b10-5808331f8209"].E16 false
++ MetaData.Schema.D2.["6af259f5-9199-4196-abc8-40652365f034"].E16 false
++ MetaData.Schema.D2.["1f7e61c6-a74d-4b81-a6d1-4ffc0bf7ab8f"].E16 false
++ MetaData.Schema.D2.["73bc32a3-5389-42da-b9fe-fda4ce4e4143"].E16 false
++ MetaData.Schema.D2.["1f2a31cd-0811-4da4-9537-a6c767c1df81"].E16 false
++ MetaData.Schema.D2.["a3a242cb-549b-41fd-8635-bb798963f0df"].E16 false

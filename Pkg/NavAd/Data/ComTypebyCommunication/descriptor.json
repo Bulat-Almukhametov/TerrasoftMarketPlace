@@ -1,0 +1,35 @@
+﻿{
+  "Descriptor": {
+    "UId": "24f8455c-0c3a-4a9d-8b65-66c80d097c85",
+    "Name": "ComTypebyCommunication",
+    "ModifiedOnUtc": "\/Date(1514195723000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "2d85be2c-eb94-4486-bddd-c6b8d1f3c5d2",
+      "Name": "ComTypebyCommunication"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": true,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "dfa76dad-9bb7-4c53-9a63-e4f6482776b9",
+        "IsForceUpdate": true,
+        "IsKey": false,
+        "ColumnName": "Communication",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "34b83991-65a0-4978-ac5e-73cd4e167a4a",
+        "IsForceUpdate": true,
+        "IsKey": false,
+        "ColumnName": "CommunicationType",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      }
+    ]
+  }
+}

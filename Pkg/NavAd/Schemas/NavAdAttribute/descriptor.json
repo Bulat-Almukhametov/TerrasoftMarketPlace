@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "90ac8628-2c3e-4acd-86b5-6977cd519349",
+    "Name": "NavAdAttribute",
+    "ModifiedOnUtc": "\/Date(1511771680000)\/",
+    "ManagerName": "SourceCodeSchemaManager",
+    "Caption": "Атрибут элемента AD",
+    "DependsOn": []
+  }
+}

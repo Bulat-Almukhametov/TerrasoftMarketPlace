@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "70198cac-0944-4bd6-ae91-8c3f846bc467",
+    "Name": "NavAdStarterProcess",
+    "ModifiedOnUtc": "\/Date(1529334869000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Запуск интеграции с LDAP по расписанию",
+    "DependsOn": []
+  }
+}

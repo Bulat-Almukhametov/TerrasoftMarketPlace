@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Обработчики атрибутов AD" />
+			<Item Name="Columns.NavAdAttributeName.Caption" Value="Имя атрибута в AD" />
+			<Item Name="Columns.NavEntityFieldName.Caption" Value="Поле сущности" />
+			<Item Name="Columns.NavHandler.Caption" Value="Имя обработчика" />
+			<Item Name="Columns.NavHandlerParameterXML.Caption" Value="Сериализованный объект параметра обработчика" />
+			<Item Name="Columns.NavIsActive.Caption" Value="Активный" />
+			<Item Name="Columns.NavPosition.Caption" Value="Порядковый номер обработчика" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

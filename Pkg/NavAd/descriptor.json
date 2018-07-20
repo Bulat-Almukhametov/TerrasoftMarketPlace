@@ -1,0 +1,17 @@
+﻿{
+  "Descriptor": {
+    "UId": "9fa090bc-7b7e-41fe-b366-106484149aec",
+    "PackageVersion": "1.0.0",
+    "Name": "NavAd",
+    "ModifiedOnUtc": "\/Date(1512373050000)\/",
+    "Maintainer": "Navicon",
+    "Description": "Интеграция с AD",
+    "DependsOn": [
+      {
+        "UId": "1f513d05-8e3f-4989-92ce-3af40e5127d6",
+        "PackageVersion": "7.8.0",
+        "Name": "CaseService"
+      }
+    ]
+  }
+}

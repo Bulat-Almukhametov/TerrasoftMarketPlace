@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "7cd94bc3-e44c-47f6-8c45-d0611241d3cf",
+    "Name": "NavAdLog",
+    "ModifiedOnUtc": "\/Date(1528965767000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Синхронизация с LDAP",
+    "DependsOn": []
+  }
+}

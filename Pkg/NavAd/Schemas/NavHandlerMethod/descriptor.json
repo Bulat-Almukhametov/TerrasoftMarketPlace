@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "aa67e4b0-4a9a-4032-a358-4bdfe67be784",
+    "Name": "NavHandlerMethod",
+    "ModifiedOnUtc": "\/Date(1529930128000)\/",
+    "Parent": {
+      "UId": "2681062b-df59-4e52-89ed-f9b7dc909ab2",
+      "Name": "BaseCodeLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Метод обработки атрибута",
+    "DependsOn": []
+  }
+}

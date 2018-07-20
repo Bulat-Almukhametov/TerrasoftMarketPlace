@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "51d4a147-e71d-4a30-bac6-48a552e4c75e",
+    "Name": "NavSubdivision",
+    "ModifiedOnUtc": "\/Date(1511253182000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Подразделение",
+    "DependsOn": []
+  }
+}

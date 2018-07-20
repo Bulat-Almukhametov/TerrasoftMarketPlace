@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "6a0f1fe9-8469-4803-902f-b90b7799b66a",
+    "Name": "NavAdAttributesHandlers",
+    "ModifiedOnUtc": "\/Date(1529995345000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Обработчики атрибутов AD",
+    "DependsOn": []
+  }
+}

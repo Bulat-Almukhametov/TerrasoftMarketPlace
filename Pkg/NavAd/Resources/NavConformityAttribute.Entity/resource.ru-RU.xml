@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Соответствие атрибута в AD и типа средства связи " />
+			<Item Name="Columns.NavAttributeAD.Caption" Value="Атрибут в AD" />
+			<Item Name="Columns.NavCommunicationType.Caption" Value="Тип средства связи" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

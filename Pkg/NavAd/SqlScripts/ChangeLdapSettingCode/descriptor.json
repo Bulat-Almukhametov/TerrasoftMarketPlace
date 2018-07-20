@@ -1,0 +1,10 @@
+﻿{
+  "SqlScript": {
+    "UId": "8013140c-43b1-46d6-8dd3-2ed886879c0a",
+    "Name": "ChangeLdapSettingCode",
+    "DBEngineType": 0,
+    "InstallType": 2,
+    "ModifiedOnUtc": "\/Date(1512982333000)\/",
+    "DependsOn": []
+  }
+}

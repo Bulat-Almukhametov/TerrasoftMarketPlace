@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "0948c089-c7f7-4fd1-8df0-4a8876ea83ba",
+    "Name": "NavSubdivisionFile",
+    "ModifiedOnUtc": "\/Date(1511253183000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Файл и ссылка объекта Подразделение",
+    "DependsOn": []
+  }
+}
