@@ -3,14 +3,19 @@
     "UId": "9fa090bc-7b7e-41fe-b366-106484149aec",
     "PackageVersion": "1.0.0",
     "Name": "NavAd",
-    "ModifiedOnUtc": "\/Date(1512373050000)\/",
+    "ModifiedOnUtc": "\/Date(1532329318000)\/",
     "Maintainer": "Navicon",
     "Description": "Интеграция с AD",
     "DependsOn": [
       {
-        "UId": "1f513d05-8e3f-4989-92ce-3af40e5127d6",
+        "UId": "a7d9c356-450c-46d7-bc85-72dca4e280ba",
         "PackageVersion": "7.8.0",
-        "Name": "CaseService"
+        "Name": "NUI"
+      },
+      {
+        "UId": "bb1e143e-f3ee-4316-9450-851ddd02d999",
+        "PackageVersion": "7.8.0",
+        "Name": "LDAP"
       }
     ]
   }
