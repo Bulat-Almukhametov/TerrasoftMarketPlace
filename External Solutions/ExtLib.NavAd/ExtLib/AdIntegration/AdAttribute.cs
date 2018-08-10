@@ -4,6 +4,7 @@ using System.DirectoryServices.Protocols;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common.Logging;
 
 namespace AdIntegration.AD
 {
@@ -25,8 +26,11 @@ namespace AdIntegration.AD
             Items = attributesList.ToArray();
             BinaryItems = binaryAttributesList.ToArray();
             Value = String.Join("; ", attributesList);
+            log.Info(Items + " Items");
+            log.Info(Value + " Value");
         }
 
+        ILog log = LogManager.GetLogger("ContactProcessLog ");
         public string Name { get; private set; }
         public string[] Items { get; private set; }
         public byte[][] BinaryItems { get; private set; }

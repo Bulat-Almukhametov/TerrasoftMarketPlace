@@ -25,7 +25,7 @@ namespace AdIntegration.AD
             var licHelper = new LicHelper(_UserConnection);
             bool hasLicense = licHelper.GetHasOperationLicense("NavAd.Use");
             AdElement[] entries;
-            using (var ldp = new LdapSync(_Credentials.ServerName, _Credentials.Login, _Credentials.Password))
+            using (var ldp = new LdapSync(_Credentials.ServerName, _Credentials.Login, _Credentials.Password, _Credentials.AuthentificationType))
             {
                 entries = ldp.GetEntriesWithAttributes(_DistinguishedName, _RequestText);
             }

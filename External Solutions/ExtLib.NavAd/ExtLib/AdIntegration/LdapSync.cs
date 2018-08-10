@@ -5,14 +5,15 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.DirectoryServices.Protocols;
-using System.Xml.Serialization;    
+using System.Xml.Serialization;
+using Common.Logging;
 
 namespace AdIntegration.AD
 {
     public class LdapSync : IDisposable
     {
         #region private fields
-        private LdapConnection _LdapConnection;
+        private LdapConnection _LdapConnection; 
         /// <summary>
         /// Элемент орг. структуры LDAP со списком пользователей для синхронизации
         /// </summary>
@@ -23,15 +24,18 @@ namespace AdIntegration.AD
         ///  Конструктор
         /// </summary>
         /// <param name="targetOU">Элемент орг. структуры LDAP со списком пользователей для синхронизации</param>
-        public LdapSync(string ldapServer, string user, string password)
+        public LdapSync(string ldapServer, string user, string password, string authentificationType)
         {
+            authentificationType = authentificationType.ToUpper();
             var credential = new NetworkCredential(user, password);
-
+            AdAuthentificationTypes adTypes = new AdAuthentificationTypes();
+            AuthType authType = adTypes.getAuthType(authentificationType);
             _LdapConnection = new LdapConnection(ldapServer)
             {
-                Credential = credential
+                Credential = credential,
+                AuthType = authType
             };
-
+            _LdapConnection.SessionOptions.ProtocolVersion = 3;
 
         }
         public void Dispose()
@@ -83,6 +87,9 @@ namespace AdIntegration.AD
                 }
 
                 //add them to our collection
+
+                ILog log = LogManager.GetLogger("ContactProcessLog ");
+                log.Info("1");
                 foreach (var entryObject in searchResponse.Entries)
                 {
                     var entry = (SearchResultEntry)entryObject;
