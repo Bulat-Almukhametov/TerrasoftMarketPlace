@@ -23,7 +23,7 @@ namespace Terrasoft.Configuration
                 _logger.Info("Парсим подразделения контакта");
                 char[] separator = Core.Configuration.SysSettings.GetValue(userConnection.AppConnection.SystemUserConnection, "ContactDepartmentSeparator").ToString().ToArray();
                 var departmentsAD = element.Attributes[handler.GetTypedColumnValue<string>("NavAdAttributeName")].Value // значение атрибута в AD
-                    .Split(separator) // делим по "косой черте" на департаменты
+                    .Split(separator) // делим по разделителю на департаменты
                     .Select(d => d.Trim()) // очищаем от лишних пробелов
                     .Where(d => d.IsNotEmpty()) // убираем из выборки пустые значения
                     .ToArray();
@@ -242,7 +242,7 @@ namespace Terrasoft.Configuration
         }
     }
 
-    [AdAttributeHandlerAttribute("AddContactAddress")]
+     [AdAttributeHandlerAttribute("AddContactAddress")]
     public class AddContactAddressClass : IAdAttributeHandler
     {
         protected readonly ILog _logger = LogManager.GetLogger("AdLog");
@@ -255,6 +255,7 @@ namespace Terrasoft.Configuration
             Guid? cityId = null;
             string addr = null;
             string room = null;
+            string zip = null;
 
             // Страна
             string countryAttr = AdAttributesHelper.GetXmlElement("country", handler.GetTypedColumnValue<string>("NavHandlerParameterXML"));
@@ -289,14 +290,24 @@ namespace Terrasoft.Configuration
                 _logger.Info("Адрес = " + addr);
             }
 
-            if (countryId != null || cityId != null || addr != null)
+            // postalCode
+            string zipAttr = AdAttributesHelper.GetXmlElement("postalCode", handler.GetTypedColumnValue<string>("NavHandlerParameterXML"));
+            if (zipAttr.IsNotEmpty() && element.Attributes.ContainsKey(zipAttr))
+            {
+                zip = element.Attributes[zipAttr].Value;
+
+                _logger.Info("zip = " + zip);
+            }
+            
+            ContactAddress address = GetContactAddress(userConnection, contact);
+            if (countryId != null || cityId != null || addr != null || zip != null)
             {
                 _logger.Info("Сохраняем адрес контакта");
-                ContactAddress address = GetContactAddress(userConnection, contact);
 
                 address.SetColumnValue("CountryId", countryId);
                 address.SetColumnValue("CityId", cityId);
                 address.Address = addr;
+                address.Zip = zip;
 
                 try
                 {
@@ -304,11 +315,21 @@ namespace Terrasoft.Configuration
                 }
                 catch (Exception ex)
                 {
-
                     _logger.Error("Ошибка при сохранении адреса " + ex.ToString());
                 }
             }
-
+            else 
+            {
+            	_logger.Info("Удаляем адрес контакта");
+            	try
+                {
+                    address.Delete();
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error("Ошибка при удалении адреса " + ex.ToString());
+                }
+            }
 
             return true;
         }
@@ -320,7 +341,7 @@ namespace Terrasoft.Configuration
             esq.AddAllSchemaColumns();
 
             esq.Filters.Add(esq.CreateFilterWithParameters(FilterComparisonType.Equal, "Contact", contact.Id));
-            esq.Filters.Add(esq.CreateFilterWithParameters(FilterComparisonType.Equal, "NavIsCreatedBySynchronization", true));
+            esq.Filters.Add(esq.CreateFilterWithParameters(FilterComparisonType.Equal, "NavSynchronizedWithLDAP", true));
 
             var collection = esq.GetEntityCollection(userConnection);
 
@@ -338,7 +359,7 @@ namespace Terrasoft.Configuration
                 result.SetDefColumnValues();
                 result.AddressTypeId = AddressTypeConsts.BusinessId;
                 result.ContactId = contact.Id;
-                result.NavIsCreatedBySynchronization = true;
+                result.NavSynchronizedWithLDAP = true;
             }
 
             return result;

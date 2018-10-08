@@ -2,13 +2,13 @@
   "Descriptor": {
     "UId": "0aaabb15-020c-4dd2-9adf-d3de24fa4d5f",
     "Name": "NavSubdivisionEmployee",
-    "ModifiedOnUtc": "\/Date(1532331540000)\/",
+    "ModifiedOnUtc": "\/Date(1534925919000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Структурное подразделение",
+    "Caption": "Сотрудник подразделения",
     "DependsOn": []
   }
 }

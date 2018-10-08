@@ -2,11 +2,10 @@
 = MetaData.Schema.A5 "9226bbff-07d0-4c8c-9719-0e3ab90d7b2e"
 = MetaData.Schema.B6 "9fa090bc-7b7e-41fe-b366-106484149aec"
 = MetaData.Schema.B7 true
-= MetaData.Schema.B8 "7.11.0.3122"
++ MetaData.Schema.B8 "7.11.0.3122"
 = MetaData.Schema.EG1.UId "4d7afde0-c3a6-4518-a206-b3dcab6f4d82"
 = MetaData.Schema.EG1.A2 "NavEntity1EventsProcess"
 = MetaData.Schema.EG1.A5 "9226bbff-07d0-4c8c-9719-0e3ab90d7b2e"
-- MetaData.Schema.EG1.B1.["fe742d1c-4346-4cc5-894e-217df991856c"].C2
 + MetaData.Schema.EG1.B8 "7.11.0.3122"
 - MetaData.Schema.EG1.FJ1.["e8934f1a-e448-400f-a4f3-e78aab6d953b"].BL6
 - MetaData.Schema.EG1.FJ1.["e8934f1a-e448-400f-a4f3-e78aab6d953b"].BL9
@@ -22,10 +21,6 @@
 - MetaData.Schema.EG1.BK3.["b98660fc-6990-4ebd-afbb-fe5b3fe00f22"].BM4.["7f1efd8f-8674-48ef-99c2-1c2c24ba7223"].BL4
 - MetaData.Schema.EG1.BK3.["b98660fc-6990-4ebd-afbb-fe5b3fe00f22"].BM4.["7f1efd8f-8674-48ef-99c2-1c2c24ba7223"].BL9
 - MetaData.Schema.EG1.BK3.["b98660fc-6990-4ebd-afbb-fe5b3fe00f22"].BL9
-+ MetaData.Schema.EG1.BK3.["079c1a2b-96d1-4935-9764-180b73ed11ac"].BM4.["6a2146bb-1688-4388-9946-29409f61d0fb"].IL2 "079c1a2b-96d1-4935-9764-180b73ed11ac"
-- MetaData.Schema.EG1.BK3.["079c1a2b-96d1-4935-9764-180b73ed11ac"].BM4.["6a2146bb-1688-4388-9946-29409f61d0fb"].BL4
-- MetaData.Schema.EG1.BK3.["079c1a2b-96d1-4935-9764-180b73ed11ac"].BM4.["6a2146bb-1688-4388-9946-29409f61d0fb"].BL9
-- MetaData.Schema.EG1.BK3.["079c1a2b-96d1-4935-9764-180b73ed11ac"].BL9
 + MetaData.Schema.EG1.BK4.["442c3f31-e1a0-4ebd-a8b7-6c9b7cddcb6e"].IL2 "7f1efd8f-8674-48ef-99c2-1c2c24ba7223"
 + MetaData.Schema.EG1.BK4.["442c3f31-e1a0-4ebd-a8b7-6c9b7cddcb6e"].CK2.["bd27a1e6-bdf8-43cf-bae0-e4b67698ccde"].IL2 "442c3f31-e1a0-4ebd-a8b7-6c9b7cddcb6e"
 - MetaData.Schema.EG1.BK4.["442c3f31-e1a0-4ebd-a8b7-6c9b7cddcb6e"].CK2.["bd27a1e6-bdf8-43cf-bae0-e4b67698ccde"].BL4
@@ -69,7 +64,7 @@
 - MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16
 + MetaData.Schema.D2 {
   "UId": "d2f53e89-1893-41f3-afd7-44ca70646228",
-  "A2": "NavIsCreatedBySynchronization",
+  "A2": "NavSynchronizedWithLDAP",
   "A3": "f1f6b4c0-4159-4ffc-93c0-d95e574145aa",
   "A4": "f1f6b4c0-4159-4ffc-93c0-d95e574145aa",
   "A5": "9226bbff-07d0-4c8c-9719-0e3ab90d7b2e",

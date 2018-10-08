@@ -2,7 +2,7 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Схема детали: &quot;Сотрудники подразделения&quot;" />
+			<Item Name="Caption" Value="Схема детали: &quot;Сотрудник подразделения&quot;" />
 		</Items>
 	</Group>
 </Resources>

@@ -2,11 +2,11 @@
 <Resources Culture="ru-RU">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Структурное подразделение" />
+			<Item Name="Caption" Value="Сотрудник подразделения" />
 			<Item Name="Columns.NavContact.Caption" Value="Сотрудник" />
 			<Item Name="Columns.NavNumber.Caption" Value="Номер" />
 			<Item Name="Columns.NavSubdivision.Caption" Value="Подразделение" />
-			<Item Name="Columns.NavSynchronizedWithLDAP.Caption" Value="Синхронизация с LDAP" />
+			<Item Name="Columns.NavSynchronizedWithLDAP.Caption" Value="Синхронизировано с LDAP" />
 			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
 		</Items>
 	</Group>

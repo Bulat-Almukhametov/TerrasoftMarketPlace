@@ -2,13 +2,12 @@
   "Descriptor": {
     "UId": "d0204c4b-aec2-4a62-9474-2e09752cddab",
     "Name": "NavSubdivision1Section",
-    "ModifiedOnUtc": "\/Date(1511253399000)\/",
+    "ModifiedOnUtc": "\/Date(1534947172000)\/",
     "Parent": {
       "UId": "7912fb69-4fee-429f-8b23-93943c35d66d",
       "Name": "BaseSectionV2"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "Схема раздела: \"Подразделения\"",
-    "DependsOn": []
+    "Caption": "Схема раздела: \"Подразделение\""
   }
 }

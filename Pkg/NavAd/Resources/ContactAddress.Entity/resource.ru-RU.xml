@@ -2,8 +2,8 @@
 <Resources Culture="ru-RU">
 	<Group Type="String">
 		<Items>
-			<Item Name="Columns.NavIsCreatedBySynchronization.Caption" Value="Создано путем синхронизации" />
 			<Item Name="Columns.NavRoom.Caption" Value="Кабинет" />
+			<Item Name="Columns.NavSynchronizedWithLDAP.Caption" Value="Синхронизировано с LDAP" />
 		</Items>
 	</Group>
 </Resources>

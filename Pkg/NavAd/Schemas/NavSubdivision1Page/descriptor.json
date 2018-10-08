@@ -2,13 +2,12 @@
   "Descriptor": {
     "UId": "3fb76cd7-4143-4793-b022-32aea1f0bd93",
     "Name": "NavSubdivision1Page",
-    "ModifiedOnUtc": "\/Date(1514153590000)\/",
+    "ModifiedOnUtc": "\/Date(1535016394000)\/",
     "Parent": {
       "UId": "d62293c0-7f14-44b1-b547-735fb40499cd",
       "Name": "BaseModulePageV2"
     },
     "ManagerName": "ClientUnitSchemaManager",
-    "Caption": "Card schema: \"Подразделение\"",
-    "DependsOn": []
+    "Caption": "Card schema: \"Подразделение\""
   }
 }

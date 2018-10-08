@@ -142,12 +142,15 @@ namespace Terrasoft.Configuration
         {
             _logger.Info(handler.GetColumnDisplayValue(handler.Schema.Columns.GetByName("NavHandler")));
             // проверяем, что из AD мы получили значение нужного атрибута
-            if (element.Attributes.ContainsKey(handler.GetTypedColumnValue<string>("NavAdAttributeName")))
+            var existsInAD = element.Attributes.ContainsKey(handler.GetTypedColumnValue<string>("NavAdAttributeName"));
+            var hasValueInAD = false;
+            var adValue = string.Empty;
+            object setValue = null;
+            if (existsInAD)
             {
-                string adValue = element.Attributes[handler.GetTypedColumnValue<string>("NavAdAttributeName")].Value;
-
-                _logger.Info("Приводим значение атрибута к типу, записываемому в БД");
-                object setValue = null;
+            	adValue = element.Attributes[handler.GetTypedColumnValue<string>("NavAdAttributeName")].Value;
+            	
+            	_logger.Info("Приводим значение атрибута к типу, записываемому в БД");
                 // определяем тип к которому нужно привести и приводим
                 string typeName = AdAttributesHelper.GetXmlElement("type", handler.GetTypedColumnValue<string>("NavHandlerParameterXML"));
                 if (typeName.IsEmpty())
@@ -160,10 +163,8 @@ namespace Terrasoft.Configuration
                         string revertParam = AdAttributesHelper.GetXmlElement("revert", handler.GetTypedColumnValue<string>("NavHandlerParameterXML"));
                         bool revert = revertParam == "true";
                         setValue = getBoolValue(adValue);
-                        if (revert)
-                            setValue = !(bool)setValue;
+                        if (revert) setValue = !(bool)setValue;
                         break;
-
                     case "date":
                         setValue = getDateValue(adValue);
                         break;
@@ -171,22 +172,21 @@ namespace Terrasoft.Configuration
                         setValue = adValue;
                         break;
                 }
-
-                if (setValue != null)
-                {
-
-                    _logger.Info("Значение атрибута LDAP [" + handler.GetTypedColumnValue<string>("NavAdAttributeName") + "] = \"" + adValue + "\"");
-                    relatedEntity.SetColumnValue(handler.GetTypedColumnValue<string>("NavEntityFieldName"), setValue);
-
-                    _logger.Info("Сохраняем в " + relatedEntity.Schema.Caption + " поле " + handler.GetTypedColumnValue<string>("NavEntityFieldName"));
-                    relatedEntity.Save(false);
-                }
-
+                hasValueInAD = (setValue != null);
             }
-            else
+            if (hasValueInAD)
             {
-                _logger.Info("Значение атрибута в LDAP пустое");
+            	// Если атрибут существует в AD и у него есть значение
+                _logger.Info("Значение атрибута LDAP [" + handler.GetTypedColumnValue<string>("NavAdAttributeName") + "] = \"" + adValue + "\"");
             }
+            else 
+            {
+            	// Если атрибут отсутствует в AD или пустует, удаляем соотвутствующие данные из системы
+            	_logger.Info("Значение атрибута в LDAP отсутствует или пустое. Очищаем поле " + handler.GetTypedColumnValue<string>("NavAdAttributeName"));
+            }
+            relatedEntity.SetColumnValue(handler.GetTypedColumnValue<string>("NavEntityFieldName"), setValue);
+            _logger.Info("Сохраняем запись");
+            relatedEntity.Save(false);
             return true;
         }
 
@@ -209,18 +209,15 @@ namespace Terrasoft.Configuration
                     case "+":
                         setValue = true;
                         break;
-
                     case "нет":
                     case "no":
                     case "-":
                         setValue = false;
                         break;
-
                     default:
                         throw new Exception("Нельзя привести к логическому типу " + stringValue);
                 }
             }
-
             return setValue;
         }
 
@@ -238,7 +235,6 @@ namespace Terrasoft.Configuration
                 if (adValue.ToLower().Contains("сегодня"))
                     setValue = DateTime.Today;
             }
-
             return setValue;
         }
     }
@@ -266,27 +262,28 @@ namespace Terrasoft.Configuration
                 var entitySchema = lookupColumn.ReferenceSchema;
                 string schemaName = entitySchema.Name;
 
-
                 var searchColumn = AdAttributesHelper.GetXmlElement("searchcolumn", handler.GetTypedColumnValue<string>("NavHandlerParameterXML"));
                 if (searchColumn.IsEmpty())
                     searchColumn = entitySchema.GetPrimaryDisplayColumnName();
 
                 Entity lookupValue = AdAttributesHelper.GetLookupValue(userConnection, adValue, schemaName, searchColumn);
-
                 if (lookupValue == null)
                 {
-
                     lookupValue = AdAttributesHelper.CreateLookupValue(userConnection, adValue, schemaName, searchColumn);
-
                 }
-
+                
+                // Если атрибут существует в AD и у него есть значение
                 _logger.Info("Записываем в поле " + relatedEntity.Schema.Caption + "." + handler.GetTypedColumnValue<string>("NavEntityFieldName") + " = \"" + lookupValue.PrimaryDisplayColumnValue + "\"(" + lookupValue.PrimaryColumnValue + ")");
                 relatedEntity.SetColumnValue(handler.GetTypedColumnValue<string>("NavEntityFieldName") + "Id", lookupValue.PrimaryColumnValue);
-
-                _logger.Info("Сохраняем запись");
-                relatedEntity.Save(false);
             }
-
+            else 
+            {
+            	// Если атрибут отсутствует в AD, удаляем соотвутствующие данные из системы
+            	_logger.Info("Очищаем поле (отсутствует в AD) " + relatedEntity.Schema.Caption + "." + handler.GetTypedColumnValue<string>("NavEntityFieldName"));
+                relatedEntity.SetColumnValue(handler.GetTypedColumnValue<string>("NavEntityFieldName") + "Id", null);
+            }
+            _logger.Info("Сохраняем запись");
+            relatedEntity.Save(false);
             return true;
         }
     }

@@ -3,7 +3,7 @@
     "UId": "9fa090bc-7b7e-41fe-b366-106484149aec",
     "PackageVersion": "1.0.0",
     "Name": "NavAd",
-    "ModifiedOnUtc": "\/Date(1532329318000)\/",
+    "ModifiedOnUtc": "\/Date(1534949576000)\/",
     "Maintainer": "Navicon",
     "Description": "Интеграция с AD",
     "DependsOn": [
@@ -16,6 +16,11 @@
         "UId": "bb1e143e-f3ee-4316-9450-851ddd02d999",
         "PackageVersion": "7.8.0",
         "Name": "LDAP"
+      },
+      {
+        "UId": "90ef497e-6e18-440d-b80e-d28f2f133509",
+        "PackageVersion": "7.8.0",
+        "Name": "ESN"
       }
     ]
   }

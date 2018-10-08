@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "e202a930-7f13-4f26-a736-a03de3b8cb84",
     "Name": "NavConformityAttribute",
-    "ModifiedOnUtc": "\/Date(1513076481000)\/",
+    "ModifiedOnUtc": "\/Date(1535098263000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "0458f7b9-f4e9-40e9-9dcb-5224dca0d45f",
@@ -10,18 +10,18 @@
     },
     "Columns": [
       {
-        "ColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
-        "IsForceUpdate": true,
-        "IsKey": false,
-        "ColumnName": "Description",
-        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
-      },
-      {
         "ColumnUId": "0da82e0d-547f-4cd2-b0c1-43e8f65d641f",
         "IsForceUpdate": true,
         "IsKey": false,
         "ColumnName": "NavCommunicationType",
         "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": true,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
       },
       {
         "ColumnUId": "765c2480-4254-4c70-97c1-a66460c16287",
@@ -38,11 +38,11 @@
         "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
       },
       {
-        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "ColumnUId": "9e53fd7c-dde4-4502-a64c-b9e34148108b",
         "IsForceUpdate": true,
-        "IsKey": true,
-        "ColumnName": "Id",
-        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+        "IsKey": false,
+        "ColumnName": "Description",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
       }
     ]
   }

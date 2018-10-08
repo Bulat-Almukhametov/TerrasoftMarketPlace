@@ -2,8 +2,8 @@
 <Resources Culture="ru-RU">
 	<Group Type="String">
 		<Items>
-			<Item Name="Caption" Value="Схема детали: &quot;Сотрудники подразделения&quot;" />
-			<Item Name="LocalizableStrings.Caption.Value" Value="Сотрудники подразделения" />
+			<Item Name="Caption" Value="Схема детали: &quot;Сотрудник подразделения&quot;" />
+			<Item Name="LocalizableStrings.Caption.Value" Value="Сотрудник в подразделении" />
 			<Item Name="LocalizableStrings.NavSubdivisionCaption.Value" Value="Сотрудники подразделения" />
 		</Items>
 	</Group>

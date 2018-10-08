@@ -2,20 +2,15 @@
 = MetaData.Schema.A5 "9226bbff-07d0-4c8c-9719-0e3ab90d7b2e"
 = MetaData.Schema.B6 "9fa090bc-7b7e-41fe-b366-106484149aec"
 = MetaData.Schema.B7 true
-= MetaData.Schema.B8 "7.11.0.3122"
++ MetaData.Schema.B8 "7.11.0.3122"
 = MetaData.Schema.EG1.UId "ffbe50b7-b861-4189-9a3e-b31934485da0"
 = MetaData.Schema.EG1.A2 "NavEntity1EventsProcess"
 = MetaData.Schema.EG1.A5 "9226bbff-07d0-4c8c-9719-0e3ab90d7b2e"
-- MetaData.Schema.EG1.B1.["fe742d1c-4346-4cc5-894e-217df991856c"].C2
 - MetaData.Schema.EG1.B1.["eb4b5212-08bf-4b99-b74e-19237ec3b864"].C2
 + MetaData.Schema.EG1.B8 "7.11.0.3122"
 + MetaData.Schema.EG1.BK8 "cb324fcc-d158-43a8-8723-e59782577f7e"
 = MetaData.Schema.EG1.BK15 []
 + MetaData.Schema.EG1.BK37 {"BL1":"Terrasoft.Core.Process.ProcessSchemaParameter","UId":"cdd58be7-2dba-4a5e-869b-1ad5d6d7513a","A2":"NotificationCaption","A3":"bb4d6607-026b-4b27-b640-8f5c77c1e89d","A4":"bb4d6607-026b-4b27-b640-8f5c77c1e89d","L1":"8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2","L8":{"GS1":3,"GS2":"[#[PropertyValue:Caption]#]"}}
-+ MetaData.Schema.EG1.BK3.["079c1a2b-96d1-4935-9764-180b73ed11ac"].BM4.["6a2146bb-1688-4388-9946-29409f61d0fb"].IL2 "079c1a2b-96d1-4935-9764-180b73ed11ac"
-- MetaData.Schema.EG1.BK3.["079c1a2b-96d1-4935-9764-180b73ed11ac"].BM4.["6a2146bb-1688-4388-9946-29409f61d0fb"].BL4
-- MetaData.Schema.EG1.BK3.["079c1a2b-96d1-4935-9764-180b73ed11ac"].BM4.["6a2146bb-1688-4388-9946-29409f61d0fb"].BL9
-- MetaData.Schema.EG1.BK3.["079c1a2b-96d1-4935-9764-180b73ed11ac"].BL9
 = MetaData.Schema.D8 "004a9121-21f8-4a1e-8918-45c0f756ea41"
 - MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16
 - MetaData.Schema.D2.["e80190a5-03b2-4095-90f7-a193a960adee"].E16

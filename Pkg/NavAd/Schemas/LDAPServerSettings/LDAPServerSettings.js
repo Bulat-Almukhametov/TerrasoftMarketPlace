@@ -32,11 +32,34 @@ define("LDAPServerSettings", ["terrasoft", "LDAPServerSettingsResources", "Servi
                             "row": 4,
                             "colSpan": 8
                         },
+                        "enabled": false,
                         "bindTo": "LDAPContactAttribute",
                         "labelConfig": {
                             "visible": true,
                             "caption": "Поле идентификатора контакта в ActiveDirectory"
                         }
+                    }
+                },
+                {
+                    "operation": "insert",
+                    "name": "LDAPContactAttributeButton",
+                    "parentName": "UserAttributes_GridLayout",
+                    "propertyName": "items",
+                    "values": {
+                        "layout": {
+                            "column": 18,
+                            "row": 4,
+                            "colSpan": 1
+                        },
+                        "itemType": Terrasoft.ViewItemType.BUTTON,
+                        "controlConfig": {
+                            "menu": {
+                                "items": {
+                                    "bindTo": "ContactAttributes"
+                                }
+                            }
+                        },
+                        
                     }
                 },
                 {
@@ -49,7 +72,32 @@ define("LDAPServerSettings", ["terrasoft", "LDAPServerSettingsResources", "Servi
 				],
 			methods: {
 
+				init: function() {
+					this.callParent(arguments);
+					this.Terrasoft.require(["Contact"], this.initContactAttributes, this);
 
+				},
+				
+				initContactAttributes: function() {
+					var contactAttributes = this.get("ContactAttributes")
+					var contactColumns = this.Terrasoft.Contact.columns;
+					for(column in contactColumns) {
+						if(contactColumns[column].dataValueType == Terrasoft.DataValueType.TEXT) {
+							contactAttributes.addItem(this.getButtonMenuItem({
+								"Caption": column,
+									"Click": {
+										"bindTo": "contactAttributeChanged"
+									},
+									"Tag": column
+							}));
+						}
+					}
+				},
+				
+				contactAttributeChanged: function(value) {
+					this.set("LDAPContactAttribute", value || "");
+				},
+				
                 /**
                  * ######## ######## ####### # ######### ######### JSON ########.
                  * @protected
@@ -122,6 +170,11 @@ define("LDAPServerSettings", ["terrasoft", "LDAPServerSettingsResources", "Servi
                     type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
                     isRequired: true,
                     value: ""
+                },
+                ContactAttributes: {
+                	dataValueType: this.Terrasoft.DataValueType.COLLECTION,
+                	value: this.Ext.create("Terrasoft.BaseViewModelCollection")
+                	
                 },
 			}
 		}

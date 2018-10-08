@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "864dbb73-6f41-428c-8970-50fd97cc22de",
     "Name": "NavAdContactsProcessingProcess",
-    "ModifiedOnUtc": "\/Date(1529584148000)\/",
+    "ModifiedOnUtc": "\/Date(1535104393000)\/",
     "ManagerName": "ProcessSchemaManager",
     "Caption": "Обработка контактов из LDAP (NavAdContactsProcessingHelper)",
     "DependsOn": []
