@@ -267,6 +267,9 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                 this.on("change:NavSourceEntity", function () {
                     var entity = this.get("NavSourceEntity");
                     this.sandbox.publish("RenderGridSettings", entity, ["NavColumnMasterModule"]);
+                    if (this.model.attributes.IsEntityInitialized) {
+                    	this.onClearReferenceToCardButtonClick();
+                    }
                 }, this);
 
                 window.cts = this;
@@ -356,7 +359,6 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                 var caption = this.get("NavReferenceToCardCaption");
                 this.set("ReferenceToCard", caption || "Добавить");
             }
-
         },
         attributes: {
             "NavSourceEntity": {
@@ -437,7 +439,7 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
             "ColumnSelected": {
                 mode: Terrasoft.MessageMode.PTP,
                 direction: Terrasoft.MessageDirectionType.SUBSCRIBE
-            },
+            }
         }
     };
 });
