@@ -73,7 +73,7 @@ define("NavColumnMasterModule", ["css!NavColumnMasterModule"], function () {
             },
 
             openGridSettings: function () {
-                var gridSettingsId = this.sandbox.id + "_NavGridSettings";
+                var gridSettingsId = this.sandbox.id + "_NavGridSettings" + Math.random();
                 this.sandbox.subscribe("GetGridSettingsInfo", this.getGridSettingsInfo, this, [gridSettingsId]);
 
                 this.set("gridSettingsId", gridSettingsId);

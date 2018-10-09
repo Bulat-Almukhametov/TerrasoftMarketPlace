@@ -266,6 +266,7 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
 
                 this.on("change:NavSourceEntity", function () {
                     var entity = this.get("NavSourceEntity");
+                    this.set("NavGridSettings", null);
                     this.sandbox.publish("RenderGridSettings", entity, ["NavColumnMasterModule"]);
                     if (this.model.attributes.IsEntityInitialized) {
                     	this.onClearReferenceToCardButtonClick();
