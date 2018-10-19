@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Обращение" />
+			<Item Name="Stages.Stage1.Caption" Value="Новое" />
+			<Item Name="Stages.Stage2.Caption" Value="Отменено" />
+			<Item Name="Stages.Stage3.Caption" Value="Закрыто" />
+			<Item Name="Stages.Stage4.Caption" Value="Решено" />
+			<Item Name="Stages.Stage5.Caption" Value="Ожидает ответа" />
+		</Items>
+	</Group>
+</Resources>

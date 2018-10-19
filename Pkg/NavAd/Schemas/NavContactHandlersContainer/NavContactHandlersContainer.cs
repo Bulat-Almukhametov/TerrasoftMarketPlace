@@ -16,10 +16,10 @@ namespace Terrasoft.Configuration
 
         public bool Evaluate(UserConnection userConnection, AdElement element, Entity relatedEntity, Entity handler)
         {
+            var contact = (Contact)relatedEntity;
+        	
             if (element.Attributes.ContainsKey(handler.GetTypedColumnValue<string>("NavAdAttributeName")))
             {
-                var contact = (Contact)relatedEntity;
-
                 _logger.Info("Парсим подразделения контакта");
                 char[] separator = Core.Configuration.SysSettings.GetValue(userConnection.AppConnection.SystemUserConnection, "ContactDepartmentSeparator").ToString().ToArray();
                 var departmentsAD = element.Attributes[handler.GetTypedColumnValue<string>("NavAdAttributeName")].Value // значение атрибута в AD
@@ -27,19 +27,18 @@ namespace Terrasoft.Configuration
                     .Select(d => d.Trim()) // очищаем от лишних пробелов
                     .Where(d => d.IsNotEmpty()) // убираем из выборки пустые значения
                     .ToArray();
-
                 if (departmentsAD.Length == 0)
+                {
                     _logger.Warn("Контакт не состоит ни в одном подразделении");
+                }
 
-                NavSubdivisionEmployee[] departmentsRecords = GetDepartmentsRecords(userConnection, contact);
+                var departmentsRecords = GetDepartmentsRecords(userConnection, contact);
 
                 _logger.Info("Создаем запись или обновляем порядковый номер в развязочной таблице");
                 for (int i = 0; i < departmentsAD.Length; i++)
                 {
-
                     // получаем департамент из БД
                     NavSubdivision subdivision = getSubdivision(userConnection, departmentsAD[i]);
-
                     // если контакт не привязан к подразделению создаем запись в развязочной таблице
                     NavSubdivisionEmployee subEmployee = departmentsRecords.FirstOrDefault(record => record.NavSubdivisionNavName == departmentsAD[i]);
                     if (subEmployee == null)
@@ -51,7 +50,6 @@ namespace Terrasoft.Configuration
                         subEmployee.NavNumber = i;
                     }
                     subEmployee.Save(false);
-
                 }
 
                 // убираем контакт из подразделения, в котором его нет
@@ -61,13 +59,18 @@ namespace Terrasoft.Configuration
                     _logger.Warn("Контак в AD больше не состоит в подразделении \"" + exSubEmploee.NavSubdivisionNavName);
                     exSubEmploee.Delete();
                 }
-
-
-
-
             }
             else
+            {
                 _logger.Info("Департамента в атрибуте LDAP " + handler.GetTypedColumnValue<string>("NavAdAttributeName") + " нет");
+                var departmentsRecords = GetDepartmentsRecords(userConnection, contact);
+                // убираем контакт из подразделений, т.к. атрибут в AD отсутствует
+                foreach (var exSubEmploee in departmentsRecords)
+                {
+                    _logger.Warn("Контак в AD больше не состоит в подразделении \"" + exSubEmploee.NavSubdivisionNavName);
+                    exSubEmploee.Delete();
+                }
+            }
 
             return true;
         }

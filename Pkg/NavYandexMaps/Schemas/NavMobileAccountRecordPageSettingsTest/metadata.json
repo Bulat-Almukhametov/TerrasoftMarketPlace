@@ -1,0 +1,36 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ClientUnitSchemaManager",
+      "UId": "d242e3bd-8740-4082-9218-bfbd0f1814c8",
+      "A2": "NavMobileAccountRecordPageSettingsTest",
+      "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c",
+      "B1": [],
+      "B2": [
+        {
+          "UId": "dddeef69-495f-4067-9dd7-0d13762c84f2",
+          "A2": "SocialMessageDetailCaptionAccount_caption",
+          "A3": "d242e3bd-8740-4082-9218-bfbd0f1814c8",
+          "A4": "d242e3bd-8740-4082-9218-bfbd0f1814c8",
+          "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c"
+        },
+        {
+          "UId": "1610c526-f9ca-405f-b6a5-61359b205569",
+          "A2": "primaryColumnSetAccount_caption",
+          "A3": "d242e3bd-8740-4082-9218-bfbd0f1814c8",
+          "A4": "d242e3bd-8740-4082-9218-bfbd0f1814c8",
+          "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c"
+        }
+      ],
+      "B3": [],
+      "B6": "a1077cca-9412-4c89-9d9f-47a2dcdc520b",
+      "B8": "7.11.0.3122",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3",
+      "HD6": "null",
+      "HD5": [],
+      "HD7": [],
+      "HD8": [],
+      "HD11": []
+    }
+  }
+}

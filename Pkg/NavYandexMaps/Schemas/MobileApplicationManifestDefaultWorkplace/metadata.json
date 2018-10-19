@@ -1,0 +1,16 @@
+= MetaData.Schema.UId "bf05e798-a3cf-44c2-9c50-f2beff1d26e9"
++ MetaData.Schema.B2 {
+  "UId": "07ec8cb9-a74b-4208-8e5b-11d298d1764f",
+  "A2": "CaseSectionTitle",
+  "A3": "bf05e798-a3cf-44c2-9c50-f2beff1d26e9",
+  "A4": "bf05e798-a3cf-44c2-9c50-f2beff1d26e9",
+  "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c"
+}
+~ MetaData.Schema.B2 ["503dbc67-3a64-4c66-82b3-2d23e285822a","b579d53b-8c46-4f4f-aa49-b7abd6de4fd8","7ac460b6-0bbf-41ef-9887-d0bee5c72d10","6fe2d1e2-1512-4ef2-90b7-426224e76f0a","353418ae-830f-4ba2-b4f8-daac663dc79e","07ec8cb9-a74b-4208-8e5b-11d298d1764f"]
+= MetaData.Schema.B6 "a1077cca-9412-4c89-9d9f-47a2dcdc520b"
++ MetaData.Schema.B7 true
+= MetaData.Schema.B8 "7.11.0.3122"
+= MetaData.Schema.HD1 "2a46e6b2-9ff1-4b56-9e6b-fe3cb1afc109"
+- MetaData.Schema.HD4
+- MetaData.Schema.HD12
++ MetaData.Schema.B7 true

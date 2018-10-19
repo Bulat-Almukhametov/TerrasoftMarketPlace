@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="NavMobileApplicationManifestTest" />
+			<Item Name="LocalizableStrings.AccountSectionTitle.Value" Value="Контрагенты" />
+			<Item Name="LocalizableStrings.ActivitySectionTitle.Value" Value="Активности" />
+			<Item Name="LocalizableStrings.CaseSectionTitle.Value" Value="Обращения" />
+			<Item Name="LocalizableStrings.ContactSectionTitle.Value" Value="Контакты" />
+			<Item Name="LocalizableStrings.SocialMessageSectionTitle.Value" Value="Лента" />
+		</Items>
+	</Group>
+</Resources>

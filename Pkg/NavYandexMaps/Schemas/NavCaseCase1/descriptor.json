@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "59b0df47-fc39-4c24-94ed-796a7d521ca5",
+    "Name": "NavCaseCase1",
+    "ModifiedOnUtc": "\/Date(1529582893000)\/",
+    "ManagerName": "DcmSchemaManager",
+    "Caption": "Обращение",
+    "DependsOn": []
+  }
+}

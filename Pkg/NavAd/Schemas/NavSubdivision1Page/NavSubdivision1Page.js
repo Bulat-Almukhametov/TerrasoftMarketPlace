@@ -56,8 +56,24 @@ define("NavSubdivision1Page", [], function() {
 		methods: {
 			init: function() {
 				this.callParent(arguments);
+				var tabs = this.get("TabsCollection").collection.items;
+				this.bringTabToFront(tabs, this.getEmployeeTab());
+			},
+			getEmployeeTab: function () {
+				var employeeTab;
 				var tabs = this.get("TabsCollection");
-				tabs.collection.items.reverse();
+				if (!tabs) return;
+				tabs.collection.items.forEach(function(item) {
+					if (item.values.Name == "Tabc6013b2dTabLabel") {
+						employeeTab = item;
+					}
+				});
+				return employeeTab;
+			},
+			bringTabToFront: function(tabs, tab) {
+				if (!tabs || !tab) return;
+				tabs.splice(tabs.indexOf(tab), 1);
+				tabs.unshift(tab);
 			}
 		},
 		rules: {},

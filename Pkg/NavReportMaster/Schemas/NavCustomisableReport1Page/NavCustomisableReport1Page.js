@@ -256,32 +256,35 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
             }
         ]/**SCHEMA_DIFF*/,
         methods: {
-
             init: function () {
                 this.callParent(arguments);
-                this.sandbox.subscribe("GetColumnsValues", this.onGetColumnsValues, this, ["NavColumnMasterModule"]);
-                this.sandbox.subscribe("SaveGridSettings", this.onSaveGridSettings, this, ["NavColumnMasterModule"]);
-                this.sandbox.subscribe("OnFiltersChanged", this.onFiltersChanged, this, ["NavReportExtendedFilterEditModule"]);
-                this.sandbox.subscribe("GetFilterModuleConfig", this.getFilterModuleConfig, this, ["NavReportExtendedFilterEditModule"]);
-
-                this.on("change:NavSourceEntity", function () {
-                    var entity = this.get("NavSourceEntity");
-                    this.set("NavGridSettings", null);
-                    this.sandbox.publish("RenderGridSettings", entity, ["NavColumnMasterModule"]);
-                    if (this.model.attributes.IsEntityInitialized) {
-                    	this.onClearReferenceToCardButtonClick();
-                    }
-                }, this);
-
+                this.subscribeEvents();
+                this.onChangeEvents();
                 window.cts = this;
             },
 
-            onEntityInitialized: function () {
-                this.callParent(arguments);
-                this.setReferenceToCardCaption();
+            /** Подписывается на сообщения */
+            subscribeEvents: function () {
+            	this.sandbox.subscribe("GetColumnsValues", this.onGetColumnsValues, this, ["NavColumnMasterModule"]);
+                this.sandbox.subscribe("SaveGridSettings", this.onSaveGridSettings, this, ["NavColumnMasterModule"]);
+                this.sandbox.subscribe("OnFiltersChanged", this.onFiltersChanged, this, ["NavReportExtendedFilterEditModule"]);
+                this.sandbox.subscribe("GetFilterModuleConfig", this.getFilterModuleConfig, this, ["NavReportExtendedFilterEditModule"]);
             },
 
+            /** Подписывается на события изменений */
+            onChangeEvents: function () {
+            	this.on("change:NavReferenceToCardCaption", this.setReferenceToCardCaption, this);
+                this.on("change:NavSourceEntity", function () {
+                    var entity = this.get("NavSourceEntity");
+                    this.set("NavGridSettings", null);
+                    if (this.model.attributes.IsEntityInitialized) {
+                    	this.onClearReferenceToCardButtonClick();
+                    }
+                    this.sandbox.publish("RenderGridSettings", entity, ["NavColumnMasterModule"]);
+                }, this);
+            },
 
+            /** Событие нажатия на кнопку очищения "Ссылка на объект карточки" (ReferenceToCard) */
             onClearReferenceToCardButtonClick: function () {
                 this.set("NavReferenceToCardCaption", "");
                 this.set("NavReferenceToCardPath", "");
@@ -289,6 +292,9 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                 control.reRender();
             },
 
+            /** Метод получения ссылки из поля "Ссылка на объект карточки" (ReferenceToCard)
+             * @returns {associative array} Возвращает ссылку на объект карточки
+             */
             getReferenceToCardLink: function () {
                 var href = {};
                 var value = this.get("NavReferenceToCardCaption");
@@ -299,11 +305,16 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                 return href;
             },
 
+            /**
+             * Событие нажатия на поле "Ссылка на объект карточки" (ReferenceToCard)
+             * @param {Control} control
+             * @param {Event} ev
+             * @param {Element} el
+             */
             onReferenceToCardClick: function (control, ev, el) {
                 var entity = this.get("NavSourceEntity");
                 var card = this.get("NavCardPage");
-                if (!card)
-                    return;
+                if (!card) return;
 
                 var schemaBuilder = this.Ext.create("Terrasoft.SchemaBuilder");
                 var config = {
@@ -311,27 +322,35 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                 };
                 schemaBuilder.requireAllSchemaHierarchy(config, function(baseHierarchy) {
                     var schema = baseHierarchy.find(item => !!item.entitySchemaName);
-
                     var structureExplorerConfig = {
                         schemaName: entity.Name,
                         lookupsColumnsOnly: true,
                         useBackwards: false,
                         allowedReferenceSchemas: [schema.entitySchemaName]
                     };
-                    StructureExplorerUtilities.Open(this.sandbox, structureExplorerConfig, this.onGetLinkToCard,
-                        null, this);
-
-
+                    StructureExplorerUtilities.Open
+                    	(this.sandbox, structureExplorerConfig, this.onGetLinkToCard, null, this);
                 }, this);
             },
 
+            /**
+             * Событие применения изменений при нажатии на поле "Ссылка на объект карточки" (ReferenceToCard)
+             * @param {associative array} args:
+             * leftExpressionCaption - заголовок "Ссылка на объект карточки" (NavReferenceToCardCaption)
+             * leftExpressionColumnPath - путь "Ссылка на объект карточки" (NavReferenceToCardPath)
+             */
             onGetLinkToCard: function (args) {
                 this.set("NavReferenceToCardCaption", args.leftExpressionCaption || "");
                 this.set("NavReferenceToCardPath", args.leftExpressionColumnPath || "");
                 var control = this.get("LinkControl");
-                control.reRender();
+                if (control) control.reRender();
             },
 
+            /**
+             * Событие сохранения настроек колонок
+             * @param {associative array} profile:
+             * listedConfig - ?
+             */
             onSaveGridSettings: function (profile) {
                 var conf = JSON.parse(profile.listedConfig);
                 var result = [];
@@ -342,23 +361,40 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                 this.set("NavGridSettings", JSON.stringify(profile));
             },
 
+            /**
+             * Событие изменения фильтров колонок
+             * @param {associative array} args:
+             * serializedFilter - фильтры колонок
+             */
             onFiltersChanged: function (args) {
-                // var emptyFilter = Ext.create("Terrasoft.FilterGroup").serialize();
-                // if (emptyFilter === args.serializedFilter) {
-                //     return;
-                // }
+            	/*
+                var emptyFilter = Ext.create("Terrasoft.FilterGroup").serialize();
+                if (emptyFilter === args.serializedFilter) {
+	                return;
+                }
+                */
                 this.set("NavFilters", args.serializedFilter);
             },
 
+            /**
+             * Получение фильтров колонок текущей схемы
+             * @returns {associative array}:
+             * rootSchemaName - наименование "Схема источника" (NavSourceEntity)
+             * filters - фильтры колонок
+             */
             getFilterModuleConfig: function () {
                 return {
                     rootSchemaName: this.get("NavSourceEntity").Name,
                     filters: this.get("NavFilters")
                 };
             },
+
+            /** Устанавливает значение NavReferenceToCardCaption в "Ссылка на объект карточки" (ReferenceToCard) */
             setReferenceToCardCaption: function () {
                 var caption = this.get("NavReferenceToCardCaption");
                 this.set("ReferenceToCard", caption || "Добавить");
+                var control = this.get("LinkControl");
+                if (control) control.reRender();
             }
         },
         attributes: {
@@ -366,14 +402,13 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                 lookupListConfig: {
                     columns: ["Name", "UId"],
                     filter: function () {
-
                         var filterGroup = Terrasoft.createFilterGroup();
                         filterGroup.logicalOperation = Terrasoft.LogicalOperatorType.AND;
-
-                        filterGroup.addItem(Terrasoft.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
-                            "ManagerName", "EntitySchemaManager"));
-                        filterGroup.addItem(Terrasoft.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
-                            "ExtendParent", 0));
+                        
+                        filterGroup.addItem(Terrasoft.createColumnFilterWithParameter
+                        	(Terrasoft.ComparisonType.EQUAL, "ManagerName", "EntitySchemaManager"));
+                        filterGroup.addItem(Terrasoft.createColumnFilterWithParameter
+                        	(Terrasoft.ComparisonType.EQUAL, "ExtendParent", 0));
 
                         return filterGroup;
                     }
@@ -390,12 +425,10 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                             Ext.create("Terrasoft.ColumnExpression", {
                                 columnPath: "[SysModule:CardSchemaUId:UID].SysModuleEntity.SysEntitySchemaUId"
                             })));
-
                         filterGroup.addItem(Terrasoft.createIsNotNullFilter(
                             Ext.create("Terrasoft.ColumnExpression", {
                                 columnPath: "[SysModuleEdit:CardSchemaUId:UId].SysModuleEntity.SysEntitySchemaUId"
                             })));
-
 
                         return filterGroup;
                     }
@@ -403,18 +436,10 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
             },
             "ReferenceToCard": {
                 dataValueType: Terrasoft.DataValueType.TEXT,
-                type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
-                "dependencies": [
-                    {
-                        "columns": ["NavReferenceToCardCaption"],
-                        "methodName": "setReferenceToCardCaption"
-                    }
-                ]
+                type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN
             },
         },
-        rules: {
-
-        },
+        rules: {},
         businessRules: /**SCHEMA_BUSINESS_RULES*/{}, /**SCHEMA_BUSINESS_RULES*/
         messages: {
             "RenderGridSettings": {

@@ -1,0 +1,73 @@
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\ExtLib.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\ExtLib.pdb
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Common.Logging.Core.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Common.Logging.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Terrasoft.Common.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Terrasoft.Core.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Terrasoft.IO.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Newtonsoft.Json.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\BCrypt.Net.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\ServiceStack.Text.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Ninject.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\log4net.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Quartz.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\dotless.Core.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Microsoft.Data.Services.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Microsoft.Data.Edm.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Microsoft.Data.OData.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Microsoft.Data.Services.Client.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\System.Spatial.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Terrasoft.Common.xml
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Terrasoft.Core.xml
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Terrasoft.IO.xml
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\ServiceStack.Text.xml
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Ninject.xml
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Quartz.xml
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\obj\Release\ExtLib.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\obj\Release\ExtLib.pdb
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\Terrasoft.Configuration.dll
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\D59EDF2DA7581C95AE5DEC3A15E78618.netmodule
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\190390BB8DFD07C8C18ED609EC0768FA.netmodule
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\obj\Release\ExtLib.csprojResolveAssemblyReference.cache
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\BBA20C84C0533FFC625E9798DAA67286.netmodule
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\4D6A1CED73D5291A706E632C614DE2A9.netmodule
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\1921DED783EF150AE38D743CCD5F4512.netmodule
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\FB95AB2420E4395AB610A3CB3EC3AF3C.netmodule
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\3275FFFBF4CCDE3C5C20AF607D60E927.netmodule
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\86595F6984EACCCDFB79370C378FDE6A.netmodule
+C:\Users\balmukhametov\Documents\Visual Studio 2015\Projects\ExtLib\ExtLib\bin\Release\E4583691AD71458C7B8ADD06FB3D1438.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\ExtLib.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\ExtLib.pdb
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Terrasoft.IO.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Newtonsoft.Json.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\BCrypt.Net.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\ServiceStack.Text.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Quartz.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Ninject.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\log4net.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\dotless.Core.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Microsoft.Data.Services.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Microsoft.Data.Edm.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Microsoft.Data.OData.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Microsoft.Data.Services.Client.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\System.Spatial.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Terrasoft.Common.xml
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Terrasoft.Core.xml
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Terrasoft.IO.xml
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\ServiceStack.Text.xml
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Quartz.xml
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\Ninject.xml
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\4D6A1CED73D5291A706E632C614DE2A9.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\1921DED783EF150AE38D743CCD5F4512.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\FB95AB2420E4395AB610A3CB3EC3AF3C.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\D59EDF2DA7581C95AE5DEC3A15E78618.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\190390BB8DFD07C8C18ED609EC0768FA.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\3275FFFBF4CCDE3C5C20AF607D60E927.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\86595F6984EACCCDFB79370C378FDE6A.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\E4583691AD71458C7B8ADD06FB3D1438.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\bin\Release\BBA20C84C0533FFC625E9798DAA67286.netmodule
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\obj\Release\ExtLib.csprojAssemblyReference.cache
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\obj\Release\ExtLib.csproj.CoreCompileInputs.cache
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\obj\Release\ExtLib.csproj.CopyComplete
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\obj\Release\ExtLib.dll
+\\BALMUKHAMETOV\Terrasoft\Marketplace\Terrasoft.WebApp\Terrasoft.Configuration\External Solutions\ExtLib.NavAd\ExtLib\obj\Release\ExtLib.pdb

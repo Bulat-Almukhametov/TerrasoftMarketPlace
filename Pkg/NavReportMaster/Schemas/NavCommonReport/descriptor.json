@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "5250b05b-0115-495c-928c-46f0c5f95b9b",
     "Name": "NavCommonReport",
-    "ModifiedOnUtc": "\/Date(1528099867000)\/",
+    "ModifiedOnUtc": "\/Date(1539700855000)\/",
     "ManagerName": "ReportSchemaManager",
     "Caption": "Report template",
     "DependsOn": []

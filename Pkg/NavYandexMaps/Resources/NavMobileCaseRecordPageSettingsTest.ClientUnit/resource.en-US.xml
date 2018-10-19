@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="NavMobileCaseRecordPageSettingsTest" />
+			<Item Name="LocalizableStrings.primaryColumnSetCase_caption.Value" Value="Основная информация" />
+			<Item Name="LocalizableStrings.SocialMessageDetailCaptionCase_caption.Value" Value="Лента" />
+		</Items>
+	</Group>
+</Resources>

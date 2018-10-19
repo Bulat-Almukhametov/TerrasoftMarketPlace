@@ -1,0 +1,57 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ClientUnitSchemaManager",
+      "UId": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+      "A2": "NavMobileApplicationManifestTest",
+      "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c",
+      "B1": [],
+      "B2": [
+        {
+          "UId": "4934f21a-0567-4fa8-87f3-024ef6541770",
+          "A2": "ContactSectionTitle",
+          "A3": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A4": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c"
+        },
+        {
+          "UId": "1393b23a-c89d-4ac4-8ea8-dccef60775b8",
+          "A2": "AccountSectionTitle",
+          "A3": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A4": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c"
+        },
+        {
+          "UId": "90f9fe1c-58b0-41a2-bc93-76b27838aba6",
+          "A2": "ActivitySectionTitle",
+          "A3": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A4": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c"
+        },
+        {
+          "UId": "c0dfe19b-4984-46f6-b7aa-09cff0761a2a",
+          "A2": "SocialMessageSectionTitle",
+          "A3": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A4": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c"
+        },
+        {
+          "UId": "e776d3ee-e260-40cd-ae00-9323b99215f3",
+          "A2": "CaseSectionTitle",
+          "A3": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A4": "14414d3d-ad0e-4d93-8ebd-2225b025183d",
+          "A5": "8e2a9c73-136e-4439-bddb-df4348eea11c"
+        }
+      ],
+      "B3": [],
+      "B6": "a1077cca-9412-4c89-9d9f-47a2dcdc520b",
+      "B8": "7.11.0.3122",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3",
+      "HD6": "null",
+      "HD5": [],
+      "HD7": [],
+      "HD8": [],
+      "HD11": []
+    }
+  }
+}
