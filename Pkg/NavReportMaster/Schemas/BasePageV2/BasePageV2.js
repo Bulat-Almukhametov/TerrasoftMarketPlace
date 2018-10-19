@@ -23,8 +23,6 @@ define("BasePageV2", ["NavRoleCheckHelper", "NavReportMasterConsts"],
                         var filterGroup = Terrasoft.createFilterGroup();
                         filterGroup.logicalOperation = Terrasoft.LogicalOperatorType.OR;
 
-
-                        var NavSourceEntity = this.get("NavSourceEntity");
                         filterGroup.addItem(Terrasoft.createColumnFilterWithParameter(
                             Terrasoft.ComparisonType.EQUAL,
                             "NavCardPage.[SysModule:CardSchemaUId:UID].SysModuleEntity.SysEntitySchemaUId", this.entitySchema.uId));
@@ -39,25 +37,8 @@ define("BasePageV2", ["NavRoleCheckHelper", "NavReportMasterConsts"],
                             var sectionId = this.sandbox.publish("GetHistoryState").state.moduleId;
                             this.sandbox.publish("UpdatePrintButton", {response: response, isInRole: isInRole, cardName: this.name }, [sectionId]);
 
-                            var printButtonItems = this.get("CardPrintMenuItems");
-
-                            if (printButtonItems){
-                                if (isInRole) {
-                                    var createOption = this.getButtonMenuItem({
-                                        Caption: "Создать ПФ",
-                                        Click: {"bindTo": "createAutoReport"}
-                                    });
-                                    printButtonItems.addItem(createOption);
-                                }
-                            }
                         }, this);
-
-
-
                 },
-                createAutoReport: function () {
-                    debugger;
-                }
 			},
             messages: {
                 "UpdatePrintButton": {

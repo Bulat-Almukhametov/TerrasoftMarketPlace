@@ -1,5 +1,5 @@
-define("BaseSectionV2", [],
-    function () {
+define("BaseSectionV2", ["NavRoleCheckHelper", "NavReportMasterConsts"],
+    function (NavRoleCheckHelper, NavReportMasterConsts) {
         return {
             methods: {
                 init: function () {
@@ -7,6 +7,33 @@ define("BaseSectionV2", [],
                     window.ctx = this;
 
                     this.sandbox.subscribe("UpdatePrintButton", this.updatePrintButton, this, [this.sandbox.id]);
+                },
+                onGridDataLoaded: function() {
+                    this.callParent(arguments);
+                    NavRoleCheckHelper.setupUserRoles.call(this);
+                },
+                onRolesSetup: function () {
+                    this.initPrintButtonItems();
+                },
+                initPrintButtonItems: function() {
+                    var isInRole = NavRoleCheckHelper.checkIsUserInRole.call(this, [NavReportMasterConsts.Roles.ReportsEditor]);
+
+                    if (isInRole) {
+
+                        var createdOption = this.getButtonMenuItem({
+                            Caption: {"bindTo": "Resources.Strings.NewCustomReportCaption"},
+                            Click: {"bindTo": "createAutoReport"}
+                        });
+                        var printMenuItems = this.get("SectionPrintMenuItems");
+                        if(printMenuItems) {
+                            printMenuItems.addItem(createdOption);
+                        } else {
+                            printMenuItems = this.Ext.create("Terrasoft.BaseViewModelCollection");
+                            printMenuItems.addItem(createdOption);
+                            this.set("SectionPrintMenuItems", printMenuItems);
+                        }
+                        this.set("IsSectionPrintButtonVisible", true);
+                    }
                 },
                 updatePrintButton: function (cfg) {
                     var printButtonItems = this.get("CardPrintMenuItems");
