@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "b5babfb7-e543-43f3-9509-c11e56a6c55a",
+    "Name": "ColumnSettingsUtilities",
+    "ModifiedOnUtc": "\/Date(1540214575000)\/",
+    "Parent": {
+      "UId": "2b7c230a-5803-4c06-9e56-ba91d57d0cd7",
+      "Name": "ColumnSettingsUtilities"
+    },
+    "ExtendParent": true,
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "ColumnSettingsUtilities"
+  }
+}

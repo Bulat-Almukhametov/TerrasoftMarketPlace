@@ -73,13 +73,13 @@ define("NavColumnMasterModule", ["css!NavColumnMasterModule"], function () {
             },
 
             openGridSettings: function () {
-                var gridSettingsId = this.sandbox.id + "_NavGridSettings" + Math.random();
+                var gridSettingsId = this.sandbox.id + "_NavGridSettings";
                 this.sandbox.subscribe("GetGridSettingsInfo", this.getGridSettingsInfo, this, [gridSettingsId]);
 
                 this.set("gridSettingsId", gridSettingsId);
                 this.sandbox.loadModule("NavGridSettings", {
                     renderTo: "NavColumnMasterModuleGridSettings",
-                    keepAlive: true,
+                    keepAlive: false,
                     id: gridSettingsId
                 });
 
@@ -91,7 +91,7 @@ define("NavColumnMasterModule", ["css!NavColumnMasterModule"], function () {
                 this.sandbox.loadModule("FilterEditModule", {
                     renderTo: "FilterProperties",
                     id: moduleId,
-                    keepAlive: true
+                    keepAlive: false
                 });
                 var masterValues = this.sandbox.publish("GetColumnsValues", ["NavSourceEntity", "NavFilters"], ["NavColumnMasterModule"]);
                 var scope = this;
@@ -106,7 +106,7 @@ define("NavColumnMasterModule", ["css!NavColumnMasterModule"], function () {
             unloadFilterModule: function () {
                 var filterModuleId = this.get("FilterModuleId");
                 if (filterModuleId)
-                    this.sandbox.unloadModule(filterModuleId, "FilterProperties", true);
+                    this.sandbox.unloadModule(filterModuleId, "FilterProperties", false);
             },
 
             onDestroy: function () {
@@ -119,13 +119,11 @@ define("NavColumnMasterModule", ["css!NavColumnMasterModule"], function () {
             unloadGridSettings: function () {
                 var gridSettingsId = this.get("gridSettingsId");
                 if (gridSettingsId)
-                    this.sandbox.unloadModule(gridSettingsId, "NavColumnMasterModuleGridSettings", true);
+                    this.sandbox.unloadModule(gridSettingsId, "NavColumnMasterModuleGridSettings", false);
             },
 
             getGridSettingsInfo: function () {
                 var masterValues = this.sandbox.publish("GetColumnsValues", ["NavSourceEntity", "NavGridSettings"], ["NavColumnMasterModule"]);
-
-                // var entitySchema = Terrasoft[masterValues.NavSourceEntity.Name];
 
                 var profile = masterValues.NavGridSettings ? JSON.parse(masterValues.NavGridSettings) : {
                         isTiled: false,
