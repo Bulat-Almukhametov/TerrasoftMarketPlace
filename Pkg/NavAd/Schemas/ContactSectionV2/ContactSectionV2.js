@@ -23,7 +23,8 @@ define("ContactSectionV2", ["GridUtilitiesV2", "RightUtilities", "ConfigurationC
 					return actionMenuItems;
 				},
 				
-				syncLdap: function(){
+				syncLdap: function() {
+					this.showInformationDialog("Началась синхронизация с AD");
 					var insert = Ext.create("Terrasoft.InsertQuery", {
 						rootSchemaName: "NavAdLog"
 					});
