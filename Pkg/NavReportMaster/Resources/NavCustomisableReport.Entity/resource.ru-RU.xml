@@ -6,10 +6,11 @@
 			<Item Name="Columns.NavCaption.Caption" Value="Заголовок отчета" />
 			<Item Name="Columns.NavCardPage.Caption" Value="Карточка для отображения отчета" />
 			<Item Name="Columns.NavColumns.Caption" Value="Колонки" />
-			<Item Name="Columns.NavDescription.Caption" Value="Начальный текст" />
+			<Item Name="Columns.NavDescription.Caption" Value="Вступительное слово" />
 			<Item Name="Columns.NavFilters.Caption" Value="Фильтры" />
 			<Item Name="Columns.NavFooter.Caption" Value="Нижний колонтитул" />
 			<Item Name="Columns.NavGridSettings.Caption" Value="Профиль таблицы" />
+			<Item Name="Columns.NavHeader.Caption" Value="Верхний колонтитул" />
 			<Item Name="Columns.NavName.Caption" Value="Название" />
 			<Item Name="Columns.NavReferenceToCardCaption.Caption" Value="Ссылка на объект карточки" />
 			<Item Name="Columns.NavReferenceToCardPath.Caption" Value="Ссылка на объект карточки (путь)" />

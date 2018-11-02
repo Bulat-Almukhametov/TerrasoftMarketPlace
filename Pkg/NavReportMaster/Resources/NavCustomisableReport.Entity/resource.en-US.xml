@@ -10,6 +10,7 @@
 			<Item Name="Columns.NavFilters.Caption" Value="Filters" />
 			<Item Name="Columns.NavFooter.Caption" Value="Footer text" />
 			<Item Name="Columns.NavGridSettings.Caption" Value="Grid settings" />
+			<Item Name="Columns.NavHeader.Caption" Value="Header text" />
 			<Item Name="Columns.NavName.Caption" Value="Name" />
 			<Item Name="Columns.NavReferenceToCardCaption.Caption" Value="Reference path to page entity" />
 			<Item Name="Columns.NavReferenceToCardPath.Caption" Value="Reference path to page entity (column names)" />

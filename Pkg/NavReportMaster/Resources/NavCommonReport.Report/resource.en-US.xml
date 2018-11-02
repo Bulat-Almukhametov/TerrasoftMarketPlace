@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Report template" />
+			<Item Name="LocalizableStrings.label1.Value" Value="Заголовок" />
+			<Item Name="LocalizableStrings.label2.Value" Value="Описание" />
+			<Item Name="LocalizableStrings.label3.Value" Value="Нижний колонтитул" />
+			<Item Name="LocalizableStrings.label4.Value" Value="label4" />
+			<Item Name="LocalizableStrings.tableCell1.Value" Value="&#xD;&#xA;" />
+		</Items>
+	</Group>
+</Resources>
