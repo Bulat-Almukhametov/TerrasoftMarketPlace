@@ -8,6 +8,7 @@ define("BaseSectionV2", ["NavReportMasterConsts", "RightUtilities"],
 
                     this.sandbox.subscribe("UpdatePrintButton", this.updatePrintButton, this, [this.sandbox.id]);
                 },
+
                 onGridDataLoaded: function() {
                     this.callParent(arguments);
                     if (this.get("CanManageCustomizableReports") != null) {
@@ -22,6 +23,7 @@ define("BaseSectionV2", ["NavReportMasterConsts", "RightUtilities"],
                         }, this);
                     }
                 },
+
                 initPrintButtonItems: function() {
                         var createdOption = this.getButtonMenuItem({
                             Caption: {"bindTo": "Resources.Strings.NewCustomReportCaption"},
@@ -43,34 +45,36 @@ define("BaseSectionV2", ["NavReportMasterConsts", "RightUtilities"],
                     var printButtonItems = this.get("CardPrintMenuItems");
                     if (printButtonItems) {
                         if (cfg.response && cfg.response.success) {
-                            cfg.response.collection.each(function(item) {
-                                var loadItemOption = this.getButtonMenuItem({
-                                    Caption: item.get("NavName"),
-                                    Click: {"bindTo": "downloadAutoReport"}
+                            var hasNewReportButton;
+                            printButtonItems.collection.items.forEach(function(item) {
+                                if (item.get("Click")  && item.get("Click").bindTo == "createAutoReport")
+                                {
+                                    hasNewReportButton = true;
+                                }
+                            }, this) ;
+                            if (!hasNewReportButton) {
+                                cfg.response.collection.each(function(item) {
+                                    var loadItemOption = this.getButtonMenuItem({
+                                        Caption: item.get("NavName"),
+                                        Click: {"bindTo": "downloadAutoReport"}
+                                    });
+                                    loadItemOption.set("Tag", item.get("Id"));
+                                    printButtonItems.add(item.get("Id"), loadItemOption);
+                                }, this);
+                                this.set("IsCardPrintButtonVisible", true);
+                                var createOption = this.getButtonMenuItem({
+                                    Caption: {"bindTo": "Resources.Strings.NewCustomReportCaption"},
+                                    Click: {"bindTo": "createAutoReport"}
                                 });
-                                loadItemOption.set("Tag", item.get("Id"));
-                                printButtonItems.add(item.get("Id"), loadItemOption);
-                            }, this);
-                            this.set("IsCardPrintButtonVisible", true);
-                        }
-                        var hasNewReportButton;
-                        printButtonItems.collection.items.forEach(function(item) {
-                            if (item.get("Click")  && item.get("Click").bindTo == "createAutoReport")
-                            {
-                                hasNewReportButton = true;
+                                createOption.set("Tag", cfg.cardName);
+                                printButtonItems.addItem(createOption);
+                                this.set("IsCardPrintButtonVisible", true);
                             }
-                        }, this) ;
-                        if (!hasNewReportButton) {
-                            var createOption = this.getButtonMenuItem({
-                                Caption: {"bindTo": "Resources.Strings.NewCustomReportCaption"},
-                                Click: {"bindTo": "createAutoReport"}
-                            });
-                            createOption.set("Tag", cfg.cardName);
-                            printButtonItems.addItem(createOption);
-                            this.set("IsCardPrintButtonVisible", true);
+
                         }
                     }
                 },
+
                 createAutoReport: function (cardName) {
                     var historyState = this.sandbox.publish("GetHistoryState");
 
@@ -124,13 +128,10 @@ define("BaseSectionV2", ["NavReportMasterConsts", "RightUtilities"],
                                 loadNewItemOption.set("Tag", result.primaryColumnValue);
                                 printButtonItems.add(result.primaryColumnValue, loadNewItemOption, printButtonItems.getCount()-1)
                             }
-
-
                         }, this, [pageId]);
                     }, this);
-
-
                 },
+
                 downloadAutoReport: function (reportId) {
                     var entityId = this.getActiveRow().get("Id");
                     var report = document.createElement("a");
