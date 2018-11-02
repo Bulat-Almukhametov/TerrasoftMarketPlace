@@ -1,18 +1,23 @@
-define("BasePageV2", ["NavRoleCheckHelper", "NavReportMasterConsts"],
-	function(NavRoleCheckHelper, NavReportMasterConsts) {
+define("BasePageV2", ["NavReportMasterConsts", "RightUtilities"],
+	function(NavReportMasterConsts, RightUtilities) {
         return {
         	methods: {
         		onEntityInitialized: function () {
 					this.callParent(arguments);
-					NavRoleCheckHelper.setupUserRoles.call(this);
-                },
-
-                onRolesSetup: function () {
-					this.addCreateReportButton();
+                    if (this.get("CanManageCustomizableReports") != null) {
+                        this.navigateToSysOperationAuditSection();
+                    } else {
+                        RightUtilities.checkCanExecuteOperation({
+                            operation: "CanManageCustomizableReports"
+                        }, function(result) {
+                            if (result) {
+                                this.addCreateReportButton();
+                            }
+                        }, this);
+                    }
                 },
 
                 addCreateReportButton: function () {
-                    var isInRole = NavRoleCheckHelper.checkIsUserInRole.call(this, [NavReportMasterConsts.Roles.ReportsEditor]);
 
                     window.cts = this;
                         var esq = Ext.create("Terrasoft.EntitySchemaQuery", {
@@ -35,7 +40,7 @@ define("BasePageV2", ["NavRoleCheckHelper", "NavReportMasterConsts"],
 
                         esq.getEntityCollection(function (response) {
                             var sectionId = this.sandbox.publish("GetHistoryState").state.moduleId;
-                            this.sandbox.publish("UpdatePrintButton", {response: response, isInRole: isInRole, cardName: this.name }, [sectionId]);
+                            this.sandbox.publish("UpdatePrintButton", {response: response, cardName: this.name }, [sectionId]);
 
                         }, this);
                 },

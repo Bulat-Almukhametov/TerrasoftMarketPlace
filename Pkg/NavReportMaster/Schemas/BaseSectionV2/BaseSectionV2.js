@@ -1,5 +1,5 @@
-define("BaseSectionV2", ["NavRoleCheckHelper", "NavReportMasterConsts"],
-    function (NavRoleCheckHelper, NavReportMasterConsts) {
+define("BaseSectionV2", ["NavReportMasterConsts", "RightUtilities"],
+    function (NavReportMasterConsts, RightUtilities) {
         return {
             methods: {
                 init: function () {
@@ -10,16 +10,19 @@ define("BaseSectionV2", ["NavRoleCheckHelper", "NavReportMasterConsts"],
                 },
                 onGridDataLoaded: function() {
                     this.callParent(arguments);
-                    NavRoleCheckHelper.setupUserRoles.call(this);
-                },
-                onRolesSetup: function () {
-                    this.initPrintButtonItems();
+                    if (this.get("CanManageCustomizableReports") != null) {
+                        this.navigateToSysOperationAuditSection();
+                    } else {
+                        RightUtilities.checkCanExecuteOperation({
+                            operation: "CanManageCustomizableReports"
+                        }, function(result) {
+                                if (result) {
+                                    this.initPrintButtonItems();
+                                }
+                        }, this);
+                    }
                 },
                 initPrintButtonItems: function() {
-                    var isInRole = NavRoleCheckHelper.checkIsUserInRole.call(this, [NavReportMasterConsts.Roles.ReportsEditor]);
-
-                    if (isInRole) {
-
                         var createdOption = this.getButtonMenuItem({
                             Caption: {"bindTo": "Resources.Strings.NewCustomReportCaption"},
                             Click: {"bindTo": "createAutoReport"}
@@ -33,13 +36,14 @@ define("BaseSectionV2", ["NavRoleCheckHelper", "NavReportMasterConsts"],
                             this.set("SectionPrintMenuItems", printMenuItems);
                         }
                         this.set("IsSectionPrintButtonVisible", true);
-                    }
+
                 },
+
                 updatePrintButton: function (cfg) {
                     var printButtonItems = this.get("CardPrintMenuItems");
-                    if (printButtonItems){
-                        if (cfg.response && cfg.response.success){
-                            cfg.response.collection.each(function(item){
+                    if (printButtonItems) {
+                        if (cfg.response && cfg.response.success) {
+                            cfg.response.collection.each(function(item) {
                                 var loadItemOption = this.getButtonMenuItem({
                                     Caption: item.get("NavName"),
                                     Click: {"bindTo": "downloadAutoReport"}
@@ -49,8 +53,14 @@ define("BaseSectionV2", ["NavRoleCheckHelper", "NavReportMasterConsts"],
                             }, this);
                             this.set("IsCardPrintButtonVisible", true);
                         }
-
-                        if (cfg.isInRole) {
+                        var hasNewReportButton;
+                        printButtonItems.collection.items.forEach(function(item) {
+                            if (item.get("Click")  && item.get("Click").bindTo == "createAutoReport")
+                            {
+                                hasNewReportButton = true;
+                            }
+                        }, this) ;
+                        if (!hasNewReportButton) {
                             var createOption = this.getButtonMenuItem({
                                 Caption: {"bindTo": "Resources.Strings.NewCustomReportCaption"},
                                 Click: {"bindTo": "createAutoReport"}
