@@ -1,5 +1,5 @@
-define("BaseSectionV2", ["NavReportMasterConsts", "RightUtilities"],
-    function (NavReportMasterConsts, RightUtilities) {
+define("BaseSectionV2", ["RightUtilities"],
+    function (RightUtilities) {
         return {
             methods: {
                 init: function () {
@@ -11,11 +11,11 @@ define("BaseSectionV2", ["NavReportMasterConsts", "RightUtilities"],
 
                 onGridDataLoaded: function() {
                     this.callParent(arguments);
-                    if (this.get("CanManageCustomizableReports") != null) {
+                    if (this.get("CanManageCustomisableReports") != null) {
                         this.navigateToSysOperationAuditSection();
                     } else {
                         RightUtilities.checkCanExecuteOperation({
-                            operation: "CanManageCustomizableReports"
+                            operation: "CanManageCustomisableReports"
                         }, function(result) {
                                 if (result) {
                                     this.initPrintButtonItems();

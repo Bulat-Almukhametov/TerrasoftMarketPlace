@@ -1,7 +1,7 @@
 define("NavReportMasterConsts", [], function() {
 	return{
-		Roles: {
-			ReportsEditor: "519915f5-9c58-4f0e-9f68-35c7e54f73dc"
+		Operations: {
+			CanManageCustomisableReports: "9C22C54D-F647-4C01-AE84-234A2787FB2F"
 		}
 	};
 });

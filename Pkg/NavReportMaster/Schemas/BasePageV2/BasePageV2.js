@@ -1,14 +1,14 @@
-define("BasePageV2", ["NavReportMasterConsts", "RightUtilities"],
-	function(NavReportMasterConsts, RightUtilities) {
+define("BasePageV2", ["RightUtilities"],
+	function(RightUtilities) {
         return {
         	methods: {
         		onEntityInitialized: function () {
 					this.callParent(arguments);
-                    if (this.get("CanManageCustomizableReports") != null) {
+                    if (this.get("CanManageCustomisableReports") != null) {
                         this.navigateToSysOperationAuditSection();
                     } else {
                         RightUtilities.checkCanExecuteOperation({
-                            operation: "CanManageCustomizableReports"
+                            operation: "CanManageCustomisableReports"
                         }, function(result) {
                             if (result) {
                                 this.addCreateReportButton();
