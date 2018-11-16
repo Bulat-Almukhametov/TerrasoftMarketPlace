@@ -17,62 +17,56 @@ define("BaseSectionV2", ["RightUtilities"],
                         RightUtilities.checkCanExecuteOperation({
                             operation: "CanManageCustomisableReports"
                         }, function(result) {
-                                if (result) {
-                                    this.initPrintButtonItems();
-                                }
+                            if (result) {
+                                this.initPrintButtonItems();
+                            }
                         }, this);
                     }
                 },
 
                 initPrintButtonItems: function() {
-                        var createdOption = this.getButtonMenuItem({
-                            Caption: {"bindTo": "Resources.Strings.NewCustomReportCaption"},
-                            Click: {"bindTo": "createAutoReport"}
-                        });
-                        var printMenuItems = this.get("SectionPrintMenuItems");
-                        if(printMenuItems) {
-                            printMenuItems.addItem(createdOption);
-                        } else {
-                            printMenuItems = this.Ext.create("Terrasoft.BaseViewModelCollection");
-                            printMenuItems.addItem(createdOption);
-                            this.set("SectionPrintMenuItems", printMenuItems);
-                        }
-                        this.set("IsSectionPrintButtonVisible", true);
-
+                    var createdOption  = this.getCreateReportButton();
+                    var printMenuItems = this.preparePrintButtonCollection(this.moduleSectionPrintFormsCollectionName);
+                    printMenuItems.addItem(createdOption);
+                    this.set(this.moduleSectionPrintFormsCollectionName, printMenuItems);
+                    this.getSectionPrintButtonVisible();
                 },
 
                 updatePrintButton: function (cfg) {
-                    var printButtonItems = this.get("CardPrintMenuItems");
-                    if (printButtonItems) {
-                        if (cfg.response && cfg.response.success) {
-                            var hasNewReportButton;
-                            printButtonItems.collection.items.forEach(function(item) {
-                                if (item.get("Click")  && item.get("Click").bindTo == "createAutoReport")
-                                {
-                                    hasNewReportButton = true;
-                                }
-                            }, this) ;
-                            if (!hasNewReportButton) {
-                                cfg.response.collection.each(function(item) {
-                                    var loadItemOption = this.getButtonMenuItem({
-                                        Caption: item.get("NavName"),
-                                        Click: {"bindTo": "downloadAutoReport"}
-                                    });
-                                    loadItemOption.set("Tag", item.get("Id"));
-                                    printButtonItems.add(item.get("Id"), loadItemOption);
-                                }, this);
-                                this.set("IsCardPrintButtonVisible", true);
-                                var createOption = this.getButtonMenuItem({
-                                    Caption: {"bindTo": "Resources.Strings.NewCustomReportCaption"},
-                                    Click: {"bindTo": "createAutoReport"}
-                                });
-                                createOption.set("Tag", cfg.cardName);
-                                printButtonItems.addItem(createOption);
-                                this.set("IsCardPrintButtonVisible", true);
-                            }
-
+                    var printButtonItems =  this.preparePrintButtonCollection(this.moduleCardPrintFormsCollectionName);
+                    if (!cfg.response || !cfg.response.success) return;
+                    cfg.response.collection.each(function(item) {
+                        var id = item.get("Id");
+                        if (!printButtonItems.contains(id)){
+                            var loadItemOption = this.getButtonMenuItem({
+                                Caption: item.get("NavName"),
+                                Click: {"bindTo": "downloadAutoReport"}
+                            });
+                            loadItemOption.set("Tag", id);
+                            printButtonItems.add(id, loadItemOption);
                         }
+                    }, this);
+                    var hasNewReportButton;
+                    printButtonItems.collection.items.forEach(function(item) {
+                        if (item.get("Click")  && item.get("Click").bindTo == "createAutoReport")
+                        {
+                            hasNewReportButton = true;
+                        }
+                    }, this) ;
+                    if (!hasNewReportButton) {
+                        var createOption = this.getCreateReportButton();
+                        createOption.set("Tag", cfg.cardName);
+                        printButtonItems.addItem(createOption);
                     }
+                    this.set(this.moduleCardPrintFormsCollectionName, printButtonItems);
+                    this.getCardPrintButtonVisible();
+                },
+
+                getCreateReportButton: function() {
+                	return this.getButtonMenuItem({
+                        Caption: {"bindTo": "Resources.Strings.NewCustomReportCaption"},
+                        Click: {"bindTo": "createAutoReport"}
+                    });
                 },
 
                 createAutoReport: function (cardName) {
