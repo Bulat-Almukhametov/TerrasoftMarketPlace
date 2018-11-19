@@ -201,14 +201,16 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                     "itemType": Terrasoft.ViewItemType.TEXT,
                     "caption": { "bindTo": "Resources.Strings.ReferenceToCardCaption"},
                     "showValueAsLink": true,
-                    "onLinkClick": function (ev, el) {
-                        ev.stopEvent();
-                        this.model.onReferenceToCardClick.call(this.model, this, ev, el);
-                        this.reRender();
-                    },
-                    "getInputType": function() {
-                        this.model.set("LinkControl", this);
-                        return this.callParent(arguments);
+                    "controlConfig": {
+                        "getInputType": function() {
+                            this.model.set("LinkControl", this);
+                            return this.callParent(arguments);
+                        },
+                        "onLinkClick": function (ev, el) {
+                            ev.stopEvent();
+                            this.model.onReferenceToCardClick.call(this.model, this, ev, el);
+                            this.reRender();
+                        },
                     },
                     "href": {"bindTo": "getReferenceToCardLink"},
                     "enabled": false,
