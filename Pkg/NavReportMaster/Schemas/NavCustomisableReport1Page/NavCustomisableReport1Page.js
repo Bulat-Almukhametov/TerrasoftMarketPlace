@@ -265,21 +265,6 @@ define("NavCustomisableReport1Page", ["BusinessRuleModule", "StructureExplorerUt
                 window.cts = this;
             },
 
-            /** Переопределение метода закрытия страницы */
-            _closePage: function(silentMode) {
-                var router = Terrasoft.router.Router;
-                var history = router.context.history;
-                var hasHistory = history.length > 1;
-                if (hasHistory) {
-                    this.sandbox.publish("BackHistoryState");
-                    if (this.isNew){
-                        this.sandbox.publish("BackHistoryState");
-                    }
-                } else if (!silentMode) {
-                    window.close();
-                }
-            },
-
             /** Подписывается на сообщения */
             subscribeEvents: function () {
             	this.sandbox.subscribe("GetColumnsValues", this.onGetColumnsValues, this, ["NavColumnMasterModule"]);

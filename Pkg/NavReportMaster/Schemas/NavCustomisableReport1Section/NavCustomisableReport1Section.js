@@ -7,9 +7,7 @@ define("NavCustomisableReport1Section", ['ConfigurationEnums'], function (Config
             /** Переопределение метода добавления записи  */
             addRecord: function (typeColumnValue) {
                 var guid = Terrasoft.generateGUID();
-                this.sandbox.publish("PushHistoryState", {
-                    hash: "CardModuleV2/NavCustomisableReport1Page/edit/" + guid
-                });
+
                 this.showBodyMask();
                 var stateObj = {
                     isSeparateMode: true,
@@ -33,8 +31,8 @@ define("NavCustomisableReport1Section", ['ConfigurationEnums'], function (Config
                 var moduleName = "CardModuleV2";
                 var moduleParams = {
                     renderTo: this.renderTo,
-                    id: this.getChainCardModuleSandboxId(typeColumnValue),
-                    keepAlive: false
+                    id: this.getChainCardModuleSandboxId(typeColumnValue) + "_Nav",
+                    keepAlive: true
                 };
                 this.sandbox.loadModule(moduleName, moduleParams);
             }
