@@ -38,8 +38,7 @@ namespace AdIntegration.AD
 
         private bool HasLicense(string sysPackageOperationCode)
         {
-            var licHelper = new LicHelper(_UserConnection);
-            return licHelper.GetHasOperationLicense(sysPackageOperationCode);
+            return _UserConnection.LicHelper.GetHasOperationLicense(sysPackageOperationCode);
         }
 
         private bool IsDemoMode()
